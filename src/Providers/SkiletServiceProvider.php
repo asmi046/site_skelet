@@ -20,7 +20,7 @@ class SkiletServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $this->publishes([
-            __DIR__.'/../resources/views' => resource_path()
+            __DIR__.'/../resources/views' => resource_path("views")
         ], 'courier-views');
     }
 }
