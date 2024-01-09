@@ -1,0 +1,26 @@
+{
+    "name": "asmi046/site_skelet",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Asmi046\\SiteSkelet\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "asmi046",
+            "email": "asmi046@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^8.1"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Asmi046\\SiteSkelet\\Providers\\SkiletServiceProvider"
+            ]
+        }
+    }
+}
