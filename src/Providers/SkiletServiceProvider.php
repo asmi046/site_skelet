@@ -21,6 +21,10 @@ class SkiletServiceProvider extends ServiceProvider
     {
         $this->publishes([
             __DIR__.'/../resources/views' => resource_path("views")
-        ], 'courier-views');
+        ], 'all-views');
+
+        $this->publishes([
+            __DIR__.'/../public/scss' => public_path("scss")
+        ], 'all-scss');
     }
 }
