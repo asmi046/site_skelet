@@ -1,0 +1,23 @@
+@import "vars";
+@import "null";
+@import "fonts";
+@import "text-styles";
+@import "form/all-form";
+@import "elements/box";
+
+body{
+    font-family: $main_fonts;
+    font-size: 16px;
+}
+
+section{
+    width: 100%;
+    padding-top: $section_space;
+    padding-bottom: $section_space;
+}
+
+.container{
+    width:100%;
+    max-width: $conteiner_max_w;
+    margin: 0 auto;
+}
