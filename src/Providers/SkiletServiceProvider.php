@@ -30,5 +30,9 @@ class SkiletServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/../Http/Controllers/Auth' => app_path("Http/Controllers/Auth")
         ], 'autch-controller');
+
+        $this->publishes([
+            __DIR__.'/../Http/Requests' => app_path("Http/Requests")
+        ], 'autch-request');
     }
 }
