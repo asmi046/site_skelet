@@ -29,7 +29,8 @@ class SkiletServiceProvider extends ServiceProvider
         ], 'scilet-all');
 
         $this->publishes([
-            __DIR__.'/../Http/Controllers/Auth' => app_path("Http/Controllers/Auth"),
+            __DIR__.'/../Http/Controllers/auth' => app_path("Http/Controllers/auth"),
+            __DIR__.'/../resources/views/auth' => resource_path("views/auth"),
             __DIR__.'/../Http/Requests/LoginFormRequest.php' => app_path("Http/Requests")."/LoginFormRequest.php",
             __DIR__.'/../Http/Requests/RegisterFormRequest.php' => app_path("Http/Requests")."/RegisterFormRequest.php",
             __DIR__.'/../routes/asmi_auth.php' => base_path("routes")."/asmi_auth.php"
