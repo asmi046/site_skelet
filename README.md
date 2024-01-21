@@ -93,6 +93,19 @@
     <x-a-icon href="{{ route('') }}" icon="fa-solid fa-door-open">Ссылка</x-a-icon>
 ```
 
+Открывающийся details 
+
+```html
+        <details>
+            <summary>
+            
+            </summary>
+            <div class="response">
+     
+            </div>
+        </details>
+```
+
 ## Элементы формы
 
 Поле поиска совмещенное с кнопкой
