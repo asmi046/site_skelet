@@ -21,5 +21,9 @@
         & i::before{
             font-size: 22px;
         }
+
+        &:hover {
+            background-color: unset;
+        }
     }
 }
