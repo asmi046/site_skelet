@@ -7,6 +7,9 @@ button,
     cursor: pointer;
     transition: $main_transition;
     display: inline-block;
+    line-height: 1;
+    font-family: $main_fonts;
+    font-size: 16px;
 
     &:hover {
         background-color: $hover_color;
