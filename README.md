@@ -92,3 +92,17 @@
 ```php
     <x-a-icon href="{{ route('') }}" icon="fa-solid fa-door-open">Ссылка</x-a-icon>
 ```
+
+## Элементы формы
+
+Поле поиска совмещенное с кнопкой
+
+```html
+    <div class="search_input">
+        <input type="text">
+        <button type="submit"><i class="pi ap_lins"></i></button>
+    </div>
+```
+
+
+
