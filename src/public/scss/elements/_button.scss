@@ -6,6 +6,7 @@ button,
     padding: 10px 30px;
     cursor: pointer;
     transition: $main_transition;
+    display: inline-block;
 
     &:hover {
         background-color: $hover_color;
