@@ -15,3 +15,14 @@ button,
         background-color: $hover_color;
     }
 }
+
+.button-white {
+    background-color: unset;
+    border: 1px solid white;
+    text-decoration: underline;
+
+    &:hover{
+        background-color: unset;
+        text-decoration: none;
+    }
+}

@@ -117,5 +117,16 @@
     </div>
 ```
 
+Кнопка простая
 
+```html
+    <button type="submit" class="button ">Кнопка</button>
+    <a class="button" href="#">Кнопка из ссылки</a>
+```
 
+Кнопка простая прозрачная (как ссылка)
+
+```html
+    <button type="submit button-white" class="button ">Кнопка</button>
+    <a class="button button-white" href="#">Кнопка из ссылки</a>
+```
