@@ -36,5 +36,43 @@ class SkiletServiceProvider extends ServiceProvider
             __DIR__.'/../routes/asmi_auth.php' => base_path("routes")."/asmi_auth.php"
         ], 'autch-all');
 
+        $this->publishes([
+            // Действия (Actions)
+            __DIR__.'/../Actions/BascetToTextAction.php' => app_path("Actions")."/BascetToTextAction.php",
+            __DIR__.'/../Actions/TelegramSendAction.php' => app_path("Actions")."/TelegramSendAction.php",
+            // Контроллеры
+            __DIR__.'/../Http/Controllers/Cart' => app_path("Http/Controllers/Cart"),
+            // Реквесты
+            __DIR__.'/../Http/Requests/Cart' => app_path("Http/Requests/Cart"),
+            // Отправщики (Mail)
+            __DIR__.'/../Mail/Cart' => app_path("Mail/Cart"),
+            // Конфиги
+            __DIR__.'/../config/cart.php' => base_path("config")."/cart.php",
+            __DIR__.'/../config/telegram.php' => base_path("config")."/telegram.php",
+            // Модели
+            __DIR__.'/../Models/Cart.php' => app_path("Models")."/Cart.php",
+            __DIR__.'/../Models/Favorite.php' => app_path("Models")."/Favorite.php",
+            __DIR__.'/../Models/Order.php' => app_path("Models")."/Order.php",
+            __DIR__.'/../Models/OrderProduct.php' => app_path("Models")."/OrderProduct.php",
+            // Миграции
+            __DIR__.'/../database/migrations/2022_10_17_222221_create_carts_table.php' => database_path("migrations")."/2022_10_17_222221_create_carts_table.php",
+            __DIR__.'/../database/migrations/2022_10_17_222222_create_orders_table.php' => database_path("migrations")."/2022_10_17_222222_create_orders_table.php",
+            __DIR__.'/../database/migrations/2022_10_17_222224_create_favorites_table.php' => database_path("migrations")."/2022_10_17_222224_create_favorites_table.php",
+            __DIR__.'/../database/migrations/2022_10_17_222223_create_order_products_table.php' => database_path("migrations")."/2022_10_17_222223_create_order_products_table.php",
+            // Стили
+            __DIR__.'/../public/scss/cart' => public_path("scss/cart"),
+            // JavaScript
+            __DIR__.'/../resources/js/cart.js' => resource_path("js")."/cart.js",
+            __DIR__.'/../resources/js/storage.js' => resource_path("js")."/storage.js",
+            __DIR__.'/../resources/js/components/cart' => resource_path("js/components/cart"),
+
+            //Шаблоны
+            __DIR__.'/../resources/views/cart' => resource_path("views/cart"),
+
+            // Роуты
+            __DIR__.'/../routes/asmi_cart.php' => base_path("routes")."/asmi_cart.php",
+            __DIR__.'/../routes/asmi_favorites.php' => base_path("routes")."/asmi_favorites.php",
+
+        ], 'all-cart');
     }
 }
