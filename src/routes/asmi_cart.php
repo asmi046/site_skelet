@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Cart\CartController;
+use App\Http\Controllers\Cart\FeedController;
 
 Route::get('/bascet/thencs', [CartController::class, "thencs"])->name("bascet_thencs");
 Route::get('/bascet', [CartController::class, "index"])->name("bascet");
@@ -11,3 +12,5 @@ Route::delete('/bascet/clear', [CartController::class, "clear"])->name("bascet_c
 Route::delete('/bascet/delete', [CartController::class, "delete"])->name("bascet_delete");
 Route::post('/bascet/send', [CartController::class, "send"])->name("bascet_send");
 Route::post('/bascet/ocsend', [CartController::class, "send_oc"])->name("bascet_oc_send");
+
+Route::get('/yml-feed/{slug}', [FeedController::class, "yml_actegory"])->name('yml_actegory');
