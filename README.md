@@ -164,6 +164,8 @@ Route::middleware('web')
 
 >app/Http/Controllers/Cart/FavoriteController.php
 
+>app/Http/Controllers/Cart/feed/FeedController.php
+
 **Реквесты**
 >app/Http/Requests/Cart/BascetForm.php
 
@@ -227,6 +229,8 @@ Route::middleware('web')
 >resources/views/cart/cart.blade.php
 
 >resources/views/cart/thencs.blade.php
+
+>resources/views/cart/feed/yml_cactegory.blade.php
 
 **Маршруты**
 >routes/asmi_cart.php
