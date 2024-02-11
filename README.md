@@ -10,7 +10,7 @@
 ### Добавление скилета
 >php artisan vendor:publish --tag=scilet-all 
 
-[Форма консультации](./tutorials/tutorials/consultation_for.md) (Инструкция)
+[Форма консультации](tutorials/consultation_for.md) (Инструкция)
 
 В файле RouteServiceProvider.php добавляем группы роутов:
 
