@@ -155,16 +155,16 @@ export default defineConfig({
 Подключите стили корзины в основной файл main.scss
 
 ```scss
-    @import "....";
-    @import "cart/all-cart";
+@import "....";
+@import "cart/all-cart";
 ```
 
 Добавьте компонент svg спрайта в файл all.blade.php:
 
 ```php
 <body>
-    @include("cart.cart-svg")
-    ...
+@include("cart.cart-svg")
+...
 ```
 
 Выполните следующие artisan команды:
