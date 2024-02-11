@@ -6,7 +6,7 @@
 
 Использование компанента:
 ```php
-<x-breadcrumbs.main></x-breadcrumbs.main>
+<x-breadcrumbs.main :title="$title"></x-breadcrumbs.main>
 ```
 
 Если необходимо использовать внутри секции:
@@ -14,7 +14,7 @@
 ```php
 <section class="breadcrumbs_section">
     <div class="container">
-        <x-breadcrumbs.main></x-breadcrumbs.main>
+        <x-breadcrumbs.main :title="$title"></x-breadcrumbs.main>
     </div>
 </section>
 
