@@ -3,6 +3,8 @@
 
 [Установка скилета](#установка-пакета) (Основная)
 
+[Хлебные крошки](tutorials/breadcrumbs.md)
+
 [Форма консультации](tutorials/consultation_for.md)
 
 [Аутентификация](tutorials/autontification.md) 

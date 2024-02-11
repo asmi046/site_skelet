@@ -29,6 +29,10 @@ class SkiletServiceProvider extends ServiceProvider
         ], 'scilet-all');
 
         $this->publishes([
+            __DIR__.'/../resources/views/components/breadcrumbs' => resource_path("views/components/breadcrumbs"),
+        ], 'breadcrumbs-component');
+
+        $this->publishes([
             __DIR__.'/../config/consultation.php' => base_path("config")."/consultation.php",
             __DIR__.'/../config/telegram.php' => base_path("config")."/telegram.php",
             // Действия (Actions)
