@@ -12,7 +12,7 @@
 [Корзина](tutorials/bascet.md)
 
 ## Установка пакета
->composer require asmi046/site_skelet
+>composer require asmi046/site_skelet --dev
 
 ### Добавление всех компонетов
 >php artisan vendor:publish --provider =Asmi046\SiteSkelet\Providers\SkiletServiceProvider
