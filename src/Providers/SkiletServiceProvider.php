@@ -46,7 +46,8 @@ class SkiletServiceProvider extends ServiceProvider
             //Шаблоны
             __DIR__.'/../resources/views/components/consultation-form' => resource_path("views/components/consultation-form"),
             __DIR__.'/../resources/views/mail/consultation' => resource_path("views/mail/consultation"),
-
+            //Роуты
+            __DIR__.'/../routes/asmi_consultation.php' => base_path("routes")."/asmi_consultation.php",
         ], 'consultation-form');
 
         $this->publishes([
