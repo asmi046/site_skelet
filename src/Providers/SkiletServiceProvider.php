@@ -29,6 +29,23 @@ class SkiletServiceProvider extends ServiceProvider
         ], 'scilet-all');
 
         $this->publishes([
+            __DIR__.'/../config/consultation.php' => base_path("config")."/consultation.php",
+            __DIR__.'/../config/telegram.php' => base_path("config")."/telegram.php",
+            // Действия (Actions)
+            __DIR__.'/../Actions/TelegramSendAction.php' => app_path("Actions")."/TelegramSendAction.php",
+            // Контроллеры
+            __DIR__.'/../Http/Controllers/Consultation' => app_path("Http/Controllers/Consultation"),
+            // Реквесты
+            __DIR__.'/../Http/Requests/Consultation' => app_path("Http/Requests/Consultation"),
+            // Отправщики (Mail)
+            __DIR__.'/../Mail/Consultation' => app_path("Mail/Consultation"),
+            //Шаблоны
+            __DIR__.'/../resources/views/components/consultation-form' => resource_path("views/components/consultation-form"),
+            __DIR__.'/../resources/views/mail/consultation' => resource_path("views/mail/consultation"),
+
+        ], 'consultation-form');
+
+        $this->publishes([
             __DIR__.'/../Http/Controllers/auth' => app_path("Http/Controllers/auth"),
             __DIR__.'/../resources/views/auth' => resource_path("views/auth"),
             __DIR__.'/../Http/Requests/LoginFormRequest.php' => app_path("Http/Requests")."/LoginFormRequest.php",

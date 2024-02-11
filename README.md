@@ -10,6 +10,8 @@
 ### Добавление скилета
 >php artisan vendor:publish --tag=scilet-all 
 
+[Форма консультации](./tutorials/tutorials/consultation_for.md) (Инструкция)
+
 В файле RouteServiceProvider.php добавляем группы роутов:
 
 ```php
@@ -241,15 +243,25 @@ Route::middleware('web')
 В файл .env  добавить настройки SMTP
 
 ```php
-    MAIL_MAILER=smtp
-    MAIL_HOST=smtp.yandex.ru
-    MAIL_PORT=465
-    MAIL_USERNAME=<yor_login>@yandex.ru
-    MAIL_PASSWORD=<yor_password>
-    MAIL_ENCRYPTION=ssl
-    MAIL_FROM_ADDRESS="<yor_login>@yandex.ru"
-    MAIL_FROM_NAME="${APP_NAME}"
+MAIL_MAILER=smtp
+MAIL_HOST=smtp.yandex.ru
+MAIL_PORT=465
+MAIL_USERNAME=<yor_login>@yandex.ru
+MAIL_PASSWORD=<yor_password>
+MAIL_ENCRYPTION=ssl
+MAIL_FROM_ADDRESS="<yor_login>@yandex.ru"
+MAIL_FROM_NAME="${APP_NAME}"
 ```
+
+Так же в файл .env  добавить настройки Telegram  оповещения
+
+```php
+TG_TOKEN=
+TG_CORESPONDENTS=""
+```
+
+Кореспонденты, перечисляются в строке через запятую
+
 В файле RouteServiceProvider.php добавляем группы роутов:
 
 ```php
