@@ -31,5 +31,5 @@ phone_format('+7 999 012 00 22');
 Вызов с опцией сайта: 
 
 ```php
-<a href="+7{{ phone_format($options['phone']) }}">{{ $options['phone'] }}</a>
+<a href="tel:+7{{ phone_format($options['phone']) }}">{{ $options['phone'] }}</a>
 ```
