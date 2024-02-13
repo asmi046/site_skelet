@@ -38,6 +38,12 @@ class SkiletServiceProvider extends ServiceProvider
             __DIR__.'/../resources/views/components/breadcrumbs' => resource_path("views/components/breadcrumbs"),
         ], 'pagination-component');
 
+        // Хелперы
+        $this->publishes([
+            __DIR__.'/../Providers/HelpersLoadProvider.php' => app_path("Providers"),
+            __DIR__.'/../helpers' => app_path("helpers"),
+        ], 'site-helper-lib');
+
         // Опции сайта
         $this->publishes([
             __DIR__.'/../Providers/OptionsProvider.php' => app_path("Providers"),

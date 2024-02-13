@@ -19,6 +19,8 @@
 
 [Формирование Seeder](tutorials/seeder_help.md)
 
+[Хэлперы](tutorials/seeder_help.md)
+
 
 ## Установка пакета
 >composer require asmi046/site_skelet --dev
