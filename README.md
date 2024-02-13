@@ -5,6 +5,8 @@
 
 [Хлебные крошки](tutorials/breadcrumbs.md)
 
+[Пагинация](tutorials/pagination_help.md)
+
 [Форма консультации](tutorials/consultation_for.md)
 
 [Аутентификация](tutorials/autontification.md) 

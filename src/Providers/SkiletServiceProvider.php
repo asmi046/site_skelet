@@ -19,19 +19,26 @@ class SkiletServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        // Скилет
         $this->publishes([
             __DIR__.'/../Http/Controllers/IndexController.php' => app_path("Http/Controllers")."/IndexController.php",
             __DIR__.'/../resources/views/layouts' => resource_path("views/layouts"),
-            __DIR__.'/../resources/views/components' => resource_path("views/components"),
             __DIR__.'/../resources/views/index.blade.php' => resource_path("views")."/index.blade.php",
             __DIR__.'/../routes/asmi_all.php' => base_path("routes")."/asmi_all.php",
             __DIR__.'/../public/scss' => public_path("scss")
         ], 'scilet-all');
 
+        // Хлебные крошки
         $this->publishes([
-            __DIR__.'/../resources/views/components/breadcrumbs' => resource_path("views/components/breadcrumbs"),
+            __DIR__.'/../resources/views/components/pagination' => resource_path("views/components/pagination"),
         ], 'breadcrumbs-component');
 
+        // Пагинация
+        $this->publishes([
+            __DIR__.'/../resources/views/components/breadcrumbs' => resource_path("views/components/breadcrumbs"),
+        ], 'pagination-component');
+
+        // Форма консультации
         $this->publishes([
             __DIR__.'/../config/consultation.php' => base_path("config")."/consultation.php",
             __DIR__.'/../config/telegram.php' => base_path("config")."/telegram.php",
