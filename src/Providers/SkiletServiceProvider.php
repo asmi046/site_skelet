@@ -38,6 +38,17 @@ class SkiletServiceProvider extends ServiceProvider
             __DIR__.'/../resources/views/components/breadcrumbs' => resource_path("views/components/breadcrumbs"),
         ], 'pagination-component');
 
+        // Опции сайта
+        $this->publishes([
+            __DIR__.'/../Providers/OptionsProvider.php' => app_path("Providers"),
+            // Миграции
+            __DIR__.'/../database/migrations/2022_10_17_222225_create_options_table.php' => database_path("migrations")."/2022_10_17_222225_create_options_table.php",
+            // Сиды
+            __DIR__.'/../database/seeder/OptionSeeder.php' => database_path("seeder")."/OptionSeeder.php",
+            // Модели
+            __DIR__.'/../Models/Option.php' => app_path("Models")."/Option.php",
+        ], 'site-options-component');
+
         // Форма консультации
         $this->publishes([
             __DIR__.'/../config/consultation.php' => base_path("config")."/consultation.php",

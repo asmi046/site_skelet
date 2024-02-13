@@ -7,6 +7,8 @@
 
 [Пагинация](tutorials/pagination_help.md)
 
+[Опции сайта](tutorials/site_options.md)
+
 [Форма консультации](tutorials/consultation_for.md)
 
 [Аутентификация](tutorials/autontification.md) 

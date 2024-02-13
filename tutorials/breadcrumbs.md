@@ -1,5 +1,7 @@
 # Хлебные крошки
 
+Публикация файлов:
+
 >php artisan vendor:publish --tag=breadcrumbs-component
 
 Будет скопирован компонент хлебных крошек размеченный в соотвествии со schema.org
