@@ -8,7 +8,7 @@
 @section('title', $title)
 @section('description', $description)
 
-@section('content')
+@section('main')
     <x-breadcrumbs :title="$title"></x-breadcrumbs>
     <div class="container">
         <h1>Корзина</h1>

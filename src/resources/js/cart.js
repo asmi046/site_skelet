@@ -52,3 +52,20 @@ const counter_app = createApp({
 
 counter_app.use(store)
 counter_app.mount("#counter_app")
+
+
+const favorites_app = createApp({
+    components:{
+        Favorites
+    },
+
+    setup() {
+
+        const store = useStore()
+        store.dispatch('initialBascet');
+        store.dispatch('initialFavorites');
+    },
+})
+
+favorites_app.use(store)
+favorites_app.mount("#favorites_app")
