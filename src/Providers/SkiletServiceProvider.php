@@ -40,7 +40,7 @@ class SkiletServiceProvider extends ServiceProvider
 
         // Хелперы
         $this->publishes([
-            __DIR__.'/../Providers/HelpersLoadProvider.php' => app_path("Providers"),
+            __DIR__.'/../Providers/HelpersLoadProvider.php' => app_path("Providers")."/HelpersLoadProvider.php",
             __DIR__.'/../helpers' => app_path("helpers"),
         ], 'site-helper-lib');
 
