@@ -19,7 +19,7 @@
 
 [Формирование Seeder](tutorials/seeder_help.md)
 
-[Хэлперы](tutorials/seeder_help.md)
+[Хэлперы](tutorials/helpers.md)
 
 
 ## Установка пакета
