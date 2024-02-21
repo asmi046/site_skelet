@@ -53,6 +53,8 @@ class SkiletServiceProvider extends ServiceProvider
             __DIR__.'/../database/seeders/OptionSeeder.php' => database_path("seeder")."/OptionSeeder.php",
             // Модели
             __DIR__.'/../Models/Option.php' => app_path("Models")."/Option.php",
+            // Текстовка
+            __DIR__.'/../public/text/main.html' => public_path("text")."/main.html",
         ], 'site-options-component');
 
         // Форма консультации
