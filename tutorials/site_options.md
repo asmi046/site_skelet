@@ -27,3 +27,13 @@ App\Providers\OptionsProvider::class,
 {{$options["vk_lnk"]}}
 ```
 передается в качестве ключа name соответствующей опции
+
+При необходимости добавить в сипиок сидеров в файле DatabaseSeeder.php
+
+```php
+$this->call(
+    [
+        OptionSeeder::class
+    ]
+);
+```
