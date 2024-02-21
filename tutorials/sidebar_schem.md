@@ -24,6 +24,19 @@
 
             </header>
 
+            <div class="sb_body">
+                <nav>
+                    <ul>
+                        <li><a href="#">Продукция</a></li>
+                        <li><a href="#">Услуги</a></li>
+                    </ul>
+                </nav>
+
+                <div class="sb_contact">
+                
+                </div>
+
+            </div>
 
             <footer>
 
