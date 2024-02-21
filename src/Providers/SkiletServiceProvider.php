@@ -28,6 +28,11 @@ class SkiletServiceProvider extends ServiceProvider
             __DIR__.'/../public/scss' => public_path("scss")
         ], 'scilet-all');
 
+        // Спрайт с SVG иконками
+        $this->publishes([
+        __DIR__.'/../resources/views/allicon.blade.php' => resource_path("views")."/allicon.blade.php",
+        ], 'asmi-icon-sprite');
+
         // Хлебные крошки
         $this->publishes([
             __DIR__.'/../resources/views/components/pagination' => resource_path("views/components/pagination"),

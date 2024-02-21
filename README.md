@@ -7,6 +7,8 @@
 
 [Пагинация](tutorials/pagination_help.md)
 
+[Спрайт с SVG иконками](tutorials/icon_sprite.md)
+
 [Опции сайта](tutorials/site_options.md)
 
 [Форма консультации](tutorials/consultation_for.md)
@@ -18,7 +20,6 @@
 Лайауты:
 
 [Схема с сайдбаром](tutorials/sidebar_schem.md)
-
 
 Фрагменты кода:
 
