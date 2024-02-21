@@ -85,6 +85,18 @@ Route::middleware('web')
 </div>
 ```
 
+Успешное выполнение действия после отправки формы:
+
+```php
+return redirect()->route('order-edit', $id)->with('success_order', 'Заказ сохранен сохранены');
+```
+
+```php
+@if (session('success_order'))
+    <p class="success">{{ session('success_order') }}</p>
+@endif
+```
+
 
 Таблицы:
 

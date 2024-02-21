@@ -17,12 +17,13 @@ button,
 }
 
 .button-white {
-    background-color: unset;
-    border: 1px solid white;
-    text-decoration: underline;
+    background-color: white;
+    color: $main_color;
+    border: 1px solid $main_color;
+    text-decoration: none;
 
     &:hover{
-        background-color: unset;
+        color: white;
         text-decoration: none;
     }
 }
