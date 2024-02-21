@@ -50,7 +50,7 @@ class SkiletServiceProvider extends ServiceProvider
             // Миграции
             __DIR__.'/../database/migrations/2022_10_17_222225_create_options_table.php' => database_path("migrations")."/2022_10_17_222225_create_options_table.php",
             // Сиды
-            __DIR__.'/../database/seeder/OptionSeeder.php' => database_path("seeder")."/OptionSeeder.php",
+            __DIR__.'/../database/seeders/OptionSeeder.php' => database_path("seeder")."/OptionSeeder.php",
             // Модели
             __DIR__.'/../Models/Option.php' => app_path("Models")."/Option.php",
         ], 'site-options-component');
