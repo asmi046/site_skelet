@@ -46,7 +46,7 @@ class SkiletServiceProvider extends ServiceProvider
 
         // Опции сайта
         $this->publishes([
-            __DIR__.'/../Providers/OptionsProvider.php' => app_path("Providers"),
+            __DIR__.'/../Providers/OptionsProvider.php' => app_path("Providers").'/OptionsProvider.php',
             // Миграции
             __DIR__.'/../database/migrations/2022_10_17_222225_create_options_table.php' => database_path("migrations")."/2022_10_17_222225_create_options_table.php",
             // Сиды

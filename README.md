@@ -15,6 +15,11 @@
 
 [Корзина](tutorials/bascet.md)
 
+Лайауты:
+
+[Схема с сайдбаром](tutorials/sidebar_schem.md)
+
+
 Фрагменты кода:
 
 [Формирование Seeder](tutorials/seeder_help.md)
