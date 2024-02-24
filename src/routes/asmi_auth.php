@@ -8,7 +8,7 @@
     });
 
     Route::middleware('guest')->group(function () {
-        Route::get('/login', [AuthController::class, "show_login_page"])->name("login");
+        Route::get('/login', [AuthController::class, "show_login_login"])->name("login");
         Route::post('/login_do', [AuthController::class, "login"])->name("login_do");
 
         Route::get('/password-recovery', [AuthController::class, "show_passrec_page"])->name("passrec");
