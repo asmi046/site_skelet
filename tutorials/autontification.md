@@ -7,5 +7,11 @@
 ```php
 Route::middleware('web')
     ->group(base_path('routes/asmi_auth.php'));
+```
 
+Изменяем модель:
+
+```php
+class User extends Authenticatable implements MustVerifyEmail
+{
 ```
