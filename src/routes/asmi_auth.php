@@ -2,6 +2,7 @@
     use Illuminate\Support\Facades\Route;
 
     use App\Http\Controllers\Auth\AuthController;
+    use Illuminate\Foundation\Auth\EmailVerificationRequest;
 
     Route::middleware('auth')->group(function () {
         Route::get('/logout', [AuthController::class, "logout"])->name("logout");
