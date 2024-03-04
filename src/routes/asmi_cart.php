@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Cart\CartController;
 use App\Http\Controllers\Cart\FeedController;
+use App\Http\Controllers\Cart\MultiSearchController;
 
 Route::get('/bascet/thencs', [CartController::class, "thencs"])->name("bascet_thencs");
 Route::get('/bascet', [CartController::class, "index"])->name("bascet");
@@ -14,3 +15,5 @@ Route::post('/bascet/send', [CartController::class, "send"])->name("bascet_send"
 Route::post('/bascet/ocsend', [CartController::class, "send_oc"])->name("bascet_oc_send");
 
 Route::get('/yml-feed/{slug}', [FeedController::class, "yml_actegory"])->name('yml_actegory');
+
+Route::get('/multi_search', [MultiSearchController::class, "index"])->name('multi_search');
