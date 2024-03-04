@@ -109,7 +109,15 @@ class SkiletServiceProvider extends ServiceProvider
             __DIR__.'/../Models/Favorite.php' => app_path("Models")."/Favorite.php",
             __DIR__.'/../Models/Order.php' => app_path("Models")."/Order.php",
             __DIR__.'/../Models/OrderProduct.php' => app_path("Models")."/OrderProduct.php",
+            __DIR__.'/../Models/Product.php' => app_path("Models")."/Product.php",
+            __DIR__.'/../Models/ProductImage.php' => app_path("Models")."/ProductImage.php",
+            __DIR__.'/../Models/ProductPrices.php' => app_path("Models")."/ProductPrices.php",
+
             // Миграции
+            __DIR__.'/../database/migrations/2022_10_17_222201_create_products_table.php' => database_path("migrations")."/2022_10_17_222201_create_products_table.php",
+            __DIR__.'/../database/migrations/2022_10_17_222202_create_product_images_table.php' => database_path("migrations")."/2022_10_17_222202_create_product_images_table.php",
+            __DIR__.'/../database/migrations/2022_10_17_222203_create_product_prices_table.php' => database_path("migrations")."/2022_10_17_222203_create_product_prices_table.php",
+
             __DIR__.'/../database/migrations/2022_10_17_222221_create_carts_table.php' => database_path("migrations")."/2022_10_17_222221_create_carts_table.php",
             __DIR__.'/../database/migrations/2022_10_17_222222_create_orders_table.php' => database_path("migrations")."/2022_10_17_222222_create_orders_table.php",
             __DIR__.'/../database/migrations/2022_10_17_222224_create_favorites_table.php' => database_path("migrations")."/2022_10_17_222224_create_favorites_table.php",
