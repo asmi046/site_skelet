@@ -21,6 +21,8 @@
 
 [Страницы](tutorials/pages.md)
 
+[Меню](tutorials/menu.md)
+
 Лайауты:
 
 [Схема с сайдбаром](tutorials/sidebar_schem.md)
