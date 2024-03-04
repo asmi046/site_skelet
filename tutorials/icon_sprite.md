@@ -25,6 +25,7 @@
 ```css
     .sprite_icon {
         fill: #333;
+        stroke: black;
     }
 
 ```
