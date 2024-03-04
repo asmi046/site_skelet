@@ -16,6 +16,7 @@ return new class extends Migration
             $table->timestamps();
             $table->string('title')->comment('Заголовок');
             $table->string('slug')->comment('Слаг');
+            $table->string('template')->nullable()->comment('Имя шаблона');
             $table->string('img')->nullable()->comment('Картинка баннера');
             $table->text('description')->nullable()->comment('Текст страницы');
 
