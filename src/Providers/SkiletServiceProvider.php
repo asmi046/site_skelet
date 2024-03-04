@@ -28,6 +28,13 @@ class SkiletServiceProvider extends ServiceProvider
             __DIR__.'/../public/scss' => public_path("scss")
         ], 'scilet-all');
 
+        // Иконки месенджеров в углу сата
+        $this->publishes([
+            __DIR__.'/../resources/views/components/messenger-btn' => resource_path("views/components/messenger-btn"),
+            // Стили
+            __DIR__.'/../public/scss/messenger-btn' => public_path("scss/messenger-btn"),
+        ], 'asmi-messenger-icon');
+
         // Спрайт с SVG иконками
         $this->publishes([
         __DIR__.'/../resources/views/allicon.blade.php' => resource_path("views")."/allicon.blade.php",

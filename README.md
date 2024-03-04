@@ -7,6 +7,8 @@
 
 [Пагинация](tutorials/pagination_help.md)
 
+[Иконки месенджеров в углу сайта](tutorials/messenger_btn.md)
+
 [Спрайт с SVG иконками](tutorials/icon_sprite.md)
 
 [Опции сайта](tutorials/site_options.md)
