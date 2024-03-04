@@ -28,6 +28,14 @@ class SkiletServiceProvider extends ServiceProvider
             __DIR__.'/../public/scss' => public_path("scss")
         ], 'scilet-all');
 
+        // Страницы сайта
+        $this->publishes([
+            __DIR__.'/../Models/Page' => app_path("Models/Page"),
+            __DIR__.'/../database/migrations/2024_03_04_111111_create_pages_table.php' => database_path("migrations")."/2024_03_04_111111_create_pages_table.php",
+            __DIR__.'/../database/seeders/PageSeeder.php' => database_path("seeders")."/PageSeeder.php",
+            __DIR__.'/../Http/Controllers/Consultation' => app_path("Http/Controllers/Consultation"),
+        ], 'asmi-pages');
+
         // Иконки месенджеров в углу сата
         $this->publishes([
             __DIR__.'/../resources/views/components/messenger-btn' => resource_path("views/components/messenger-btn"),

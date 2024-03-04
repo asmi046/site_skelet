@@ -19,6 +19,8 @@
 
 [Корзина](tutorials/bascet.md)
 
+[Страницы](tutorials/pages.md)
+
 Лайауты:
 
 [Схема с сайдбаром](tutorials/sidebar_schem.md)
