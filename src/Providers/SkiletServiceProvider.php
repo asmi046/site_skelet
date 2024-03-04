@@ -28,12 +28,19 @@ class SkiletServiceProvider extends ServiceProvider
             __DIR__.'/../public/scss' => public_path("scss")
         ], 'scilet-all');
 
+        // Меню
+        $this->publishes([
+            __DIR__.'/../Models/Menu' => app_path("Models/Menu"),
+            __DIR__.'/../database/migrations/2024_03_04_111112_create_menus_table.php' => database_path("migrations")."/2024_03_04_111112_create_menus_table.php",
+            __DIR__.'/../database/seeders/MenuSeeder.php' => database_path("seeders")."/MenuSeeder.php",
+        ], 'asmi-menu');
+
         // Страницы сайта
         $this->publishes([
             __DIR__.'/../Models/Page' => app_path("Models/Page"),
             __DIR__.'/../database/migrations/2024_03_04_111111_create_pages_table.php' => database_path("migrations")."/2024_03_04_111111_create_pages_table.php",
             __DIR__.'/../database/seeders/PageSeeder.php' => database_path("seeders")."/PageSeeder.php",
-            __DIR__.'/../Http/Controllers/Consultation' => app_path("Http/Controllers/Consultation"),
+            __DIR__.'/../Http/Controllers/Page' => app_path("Http/Controllers/Page"),
             __DIR__.'/../resources/views/page/' => resource_path("views/page"),
         ], 'asmi-pages');
 
