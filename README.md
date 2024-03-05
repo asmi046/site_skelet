@@ -7,8 +7,6 @@
 
 [Пагинация](tutorials/pagination_help.md)
 
-[Иконки месенджеров в углу сайта](tutorials/messenger_btn.md)
-
 [Спрайт с SVG иконками](tutorials/icon_sprite.md)
 
 [Опции сайта](tutorials/site_options.md)
@@ -18,10 +16,6 @@
 [Аутентификация](tutorials/autontification.md) 
 
 [Корзина](tutorials/bascet.md)
-
-[Страницы](tutorials/pages.md)
-
-[Меню](tutorials/menu.md)
 
 Лайауты:
 
@@ -50,6 +44,33 @@
 ```php
 Route::middleware('web')
     ->group(base_path('routes/asmi_all.php'));
+
+
+```
+Добавляем SCSS:
+
+>npm add -D sass
+
+Добавляем плагин vue:
+
+>npm i @vitejs/plugin-vue
+
+Редактируем vite.config.js:
+
+```JavaScript
+import { defineConfig } from 'vite';
+import laravel from 'laravel-vite-plugin';
+import vue from '@vitejs/plugin-vue';
+
+export default defineConfig({
+    plugins: [
+        vue(),
+        laravel({
+            input: ['resources/css/app.css', 'resources/js/app.js'],
+            refresh: true,
+        }),
+    ],
+});
 
 ```
 
