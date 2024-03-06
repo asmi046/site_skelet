@@ -28,6 +28,11 @@ class SkiletServiceProvider extends ServiceProvider
             __DIR__.'/../public/scss' => public_path("scss")
         ], 'scilet-all');
 
+        // Водяные знаки для загрузки фото
+        $this->publishes([
+            __DIR__.'/../Actions/WaterMark.php' => app_path("Actions")."/WaterMark.php",
+        ], 'asmi-watermark');
+
         // Меню
         $this->publishes([
             __DIR__.'/../Models/Menu' => app_path("Models/Menu"),

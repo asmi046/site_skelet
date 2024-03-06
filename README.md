@@ -5,6 +5,8 @@
 
 [Хлебные крошки](tutorials/breadcrumbs.md)
 
+[Водяные знаки для загружаемых фото](tutorials/water_mark.md)
+
 [Пагинация](tutorials/pagination_help.md)
 
 [Спрайт с SVG иконками](tutorials/icon_sprite.md)
