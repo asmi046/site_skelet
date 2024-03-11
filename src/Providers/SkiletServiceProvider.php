@@ -63,12 +63,12 @@ class SkiletServiceProvider extends ServiceProvider
 
         // Хлебные крошки
         $this->publishes([
-            __DIR__.'/../resources/views/components/pagination' => resource_path("views/components/pagination"),
+            __DIR__.'/../resources/views/components/breadcrumbs' => resource_path("views/components/breadcrumbs"),
         ], 'breadcrumbs-component');
 
         // Пагинация
         $this->publishes([
-            __DIR__.'/../resources/views/components/breadcrumbs' => resource_path("views/components/breadcrumbs"),
+            __DIR__.'/../resources/views/components/pagination' => resource_path("views/components/pagination"),
         ], 'pagination-component');
 
         // Хелперы
