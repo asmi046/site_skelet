@@ -87,6 +87,14 @@
 >routes/asmi_cart.php
 >routes/asmi_favorites.php
 
+## Пакеты
+
+>npm i vue
+>npm i vue-axios
+>npm i vuex
+>npm i v-slim-mask
+>npm i @vitejs/plugin-vue
+
 ## Дополнительная настройка
 
 В файл .env  добавить настройки SMTP
