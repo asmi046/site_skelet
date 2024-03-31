@@ -4,7 +4,6 @@
         margin: 20px 0;
     }
 
-    ol li,
     ul li {
         margin: 10px 0;
         position: relative;
@@ -12,8 +11,18 @@
     }
 
     ol{
+
+        padding-left: 20px;
+
+        li {
+            margin: 10px 0;
+        }
+
         li::marker{
             color: $main_color;
+            font-weight: bold;
+            position: absolute!important;
+            left: 0;
         }
     }
 
