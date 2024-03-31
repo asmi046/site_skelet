@@ -3,4 +3,21 @@
     p{
         margin: 10px 0;
     }
+
+    ul li {
+        margin: 10px 0;
+        position: relative;
+        padding-left: 20px;
+    }
+
+    li:before{
+        content:"";
+        position: absolute;
+        width: 6px;
+        height: 6px;
+        left: 0;
+        top:7px;
+        border-radius: 2px;
+        background-color: $main_color;
+    }    
 }
