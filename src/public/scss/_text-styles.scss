@@ -1,16 +1,23 @@
 .text_styles {
 
     p{
-        margin: 10px 0;
+        margin: 20px 0;
     }
 
+    ol li,
     ul li {
         margin: 10px 0;
         position: relative;
         padding-left: 20px;
     }
 
-    li:before{
+    ol{
+        li::marker{
+            color: $main_color;
+        }
+    }
+
+    ul li:before{
         content:"";
         position: absolute;
         width: 6px;
@@ -19,5 +26,5 @@
         top:7px;
         border-radius: 2px;
         background-color: $main_color;
-    }    
+    }
 }
