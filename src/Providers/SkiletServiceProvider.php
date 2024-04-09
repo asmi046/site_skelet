@@ -109,6 +109,7 @@ class SkiletServiceProvider extends ServiceProvider
             __DIR__.'/../routes/asmi_consultation.php' => base_path("routes")."/asmi_consultation.php",
         ], 'consultation-form');
 
+        // Авторизация
         $this->publishes([
             __DIR__.'/../Http/Controllers/Auth' => app_path("Http/Controllers/Auth"),
             // Отправщики (Mail)
@@ -116,7 +117,8 @@ class SkiletServiceProvider extends ServiceProvider
             __DIR__.'/../resources/views/auth' => resource_path("views/auth"),
             __DIR__.'/../Http/Requests/LoginFormRequest.php' => app_path("Http/Requests")."/LoginFormRequest.php",
             __DIR__.'/../Http/Requests/RegisterFormRequest.php' => app_path("Http/Requests")."/RegisterFormRequest.php",
-            __DIR__.'/../routes/asmi_auth.php' => base_path("routes")."/asmi_auth.php"
+            __DIR__.'/../routes/asmi_auth.php' => base_path("routes")."/asmi_auth.php",
+            __DIR__.'/../routes/asmi_password_req.php' => base_path("routes")."/asmi_password_req.php",
         ], 'autch-all');
 
         $this->publishes([
