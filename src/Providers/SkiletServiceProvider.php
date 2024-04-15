@@ -28,6 +28,13 @@ class SkiletServiceProvider extends ServiceProvider
             __DIR__.'/../public/scss' => public_path("scss")
         ], 'scilet-all');
 
+        // Боковое меню
+        $this->publishes([
+            __DIR__.'/../resources/js/cart.js' => resource_path("js")."/cart.js",
+            __DIR__.'/../public/scss_menues.scss' => public_path("scss/_menues.scss"),
+            __DIR__.'/../resources/views/components/menues' => resource_path("views/components/menues"),
+        ], 'asmi-side-menue');
+
         // Водяные знаки для загрузки фото
         $this->publishes([
             __DIR__.'/../Actions/WaterMark.php' => app_path("Actions")."/WaterMark.php",
