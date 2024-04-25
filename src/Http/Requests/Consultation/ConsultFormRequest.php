@@ -23,6 +23,7 @@ class ConsultFormRequest extends FormRequest
     {
         return [
             'phone.required' => 'Поле "Телефон" должно быть заполнено',
+            'policy_check.required' => 'Необходимо согласиться с политикой в области обработки персональных данных',
         ];
     }
 
@@ -36,7 +37,8 @@ class ConsultFormRequest extends FormRequest
         return [
             "name" => [],
             "phone" => ['required','string'],
-            "message" => []
+            "message" => [],
+            "policy_check" => ['required']
         ];
     }
 }
