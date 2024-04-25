@@ -28,10 +28,30 @@
             <div class="field">
                 <label class="label">Сообщение</label>
                 <div class="control">
-                    <textarea rows="5" name="message" class="input" placeholder="Обязательно укажити, марку и модель авто и VIN"></textarea>
+                    <textarea rows="5" name="message" class="input" placeholder="
+                    <div class="field check-box">
+                        <label class="check_wrapper">
+                            <input name="policy_check" type="checkbox" checked > <span>Заполняя данную форму я соглашаюсь с <a href="#">политикой конфиденциальности</a></span>
+                        </label>
+
+                        @error('policy_check')
+                            <p class="error">{{$message}}</p>
+                        @enderror
+                    </div>"></textarea>
                 </div>
 
                 @error('name')
+                    <p class="error">{{$message}}</p>
+                @enderror
+            </div>
+
+
+            <div class="field check-box">
+                <label class="check_wrapper">
+                    <input name="policy_check" type="checkbox" checked > <span>Заполняя данную форму я соглашаюсь с <a href="#">политикой конфиденциальности</a></span>
+                </label>
+
+                @error('policy_check')
                     <p class="error">{{$message}}</p>
                 @enderror
             </div>

@@ -25,6 +25,19 @@ input{
     height: 2.5em;
 }
 
+input[type=checkbox] {
+    width: 15px;
+    height: 15px;
+}
+
+.check_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    span {
+        margin:  auto 0 auto 10px;
+    }
+}
+
 textarea{
     padding: 5px 15px;
     height: unset;
