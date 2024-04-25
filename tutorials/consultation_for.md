@@ -47,7 +47,7 @@ MAIL_FROM_NAME="${APP_NAME}"
 ## Добавление формы консультации в разметку сайта
 
 ```php
-    <x-consultation-form.form></x-consultation-form.form>
+    <x-consultation-form.form  title="Запрос прайса"></x-consultation-form.form>
 ```
 
 

@@ -1,6 +1,6 @@
 <section class="help_form_section">
     <div class="container">
-        <h2>Помощь специалиста</h2>
+        <h2>{{ $title ?? "Форма обратной связи"}}</h2>
         <form method="POST" action="{{ route('send_consultation') }}" class="box"  action="">
             @csrf
             <div class="field">
