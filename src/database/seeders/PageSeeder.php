@@ -39,6 +39,15 @@ class PageSeeder extends Seeder
         //             'seo_title' => 'Тестовая страница 1',
         //             'seo_description' => 'Тестовая страница 1',
         //         ]
+
+        //          [
+        //              'title' => 'Политика конфиденциальности',
+        //              'slug' => Str::slug("Политика конфиденциальности"),
+        //              'img' => Storage::url("banner/main_bg.webp"),
+        //              'description' => file_get_contents(public_path('text//policy.html')),
+        //              'seo_title' => 'Политика конфиденциальности',
+        //              'seo_description' => 'Политика конфиденциальности',
+        //          ],
         //     ]);
 
     }
