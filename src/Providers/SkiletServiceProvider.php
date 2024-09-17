@@ -86,6 +86,11 @@ class SkiletServiceProvider extends ServiceProvider
             __DIR__.'/../helpers' => app_path("helpers"),
         ], 'site-helper-lib');
 
+        // Компонет карты
+        $this->publishes([
+            __DIR__.'/../resources/views/components/map' => resource_path("views/components/map"),
+        ], 'map-component');
+
         // Опции сайта
         $this->publishes([
             __DIR__.'/../Providers/OptionsProvider.php' => app_path("Providers").'/OptionsProvider.php',

@@ -12,6 +12,8 @@
 
 [Пагинация](pagination_help.md)
 
+[Карта](map.md)
+
 [Спрайт с SVG иконками](icon_sprite.md)
 
 [Опции сайта](site_options.md)
