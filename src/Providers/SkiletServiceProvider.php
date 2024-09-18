@@ -30,8 +30,8 @@ class SkiletServiceProvider extends ServiceProvider
 
         // Боковое меню
         $this->publishes([
-            __DIR__.'/../resources/js/cart.js' => resource_path("js")."/cart.js",
-            __DIR__.'/../public/scss_menues.scss' => public_path("scss/_menues.scss"),
+            __DIR__.'/../resources/js/menues.js' => resource_path("js")."/menues.js",
+            __DIR__.'/../public/scss/_menues.scss' => public_path("scss/_menues.scss"),
             __DIR__.'/../resources/views/components/menues' => resource_path("views/components/menues"),
         ], 'asmi-side-menue');
 
