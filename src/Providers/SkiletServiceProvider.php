@@ -2,7 +2,11 @@
 
 namespace Asmi046\SiteSkelet\Providers;
 
+
 use Illuminate\Support\ServiceProvider;
+use Asmi046\SiteSkelet\Console\Commands\CreateUser;
+use Asmi046\SiteSkelet\Console\Commands\ChengeUserPass;
+
 
 class SkiletServiceProvider extends ServiceProvider
 {
@@ -19,6 +23,13 @@ class SkiletServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                ChengeUserPass::class,
+                CreateUser::class,
+            ]);
+        }
+
         // Скилет
         $this->publishes([
             __DIR__.'/../Http/Controllers/IndexController.php' => app_path("Http/Controllers")."/IndexController.php",
