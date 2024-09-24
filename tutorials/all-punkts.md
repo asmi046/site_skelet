@@ -46,13 +46,18 @@
 
 
 
-В файле RouteServiceProvider.php добавляем группы роутов:
+В файле bootstrap/app.php добавляем группы роутов:
 
 ```php
-Route::middleware('web')
-    ->group(base_path('routes/asmi_all.php'));
-
-
+    ->withRouting(
+        web: __DIR__.'/../routes/web.php',
+        commands: __DIR__.'/../routes/console.php',
+        health: '/up',
+        using: function () {
+            Route::middleware('web')
+                ->group(base_path('routes/asmi_all.php'));
+        }
+    )
 ```
 Добавляем SCSS:
 
