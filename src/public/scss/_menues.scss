@@ -41,6 +41,10 @@
 
     &.active .side_menue{
         left:0;
+
+        & * {
+            opacity: 1;
+         }
     }
 
 }
