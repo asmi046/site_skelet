@@ -30,6 +30,11 @@ class SkiletServiceProvider extends ServiceProvider
             ]);
         }
 
+        // Модальное окно
+        $this->publishes([
+            __DIR__.'/../resources/js/components/ModalWindow.vue' => resource_path("js/components/ModalWindow.vue"),
+        ], 'modal-win');
+
         // Скилет
         $this->publishes([
             __DIR__.'/../Http/Controllers/IndexController.php' => app_path("Http/Controllers")."/IndexController.php",

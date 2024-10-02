@@ -8,6 +8,8 @@
 
 [Хлебные крошки](breadcrumbs.md)
 
+[Модальное окно](ModalWindows.md)
+
 [Водяные знаки для загружаемых фото](water_mark.md)
 
 [Пагинация](pagination_help.md)
