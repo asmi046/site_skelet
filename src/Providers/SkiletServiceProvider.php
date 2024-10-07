@@ -63,6 +63,10 @@ class SkiletServiceProvider extends ServiceProvider
             __DIR__.'/../database/seeders/MenuSeeder.php' => database_path("seeders")."/MenuSeeder.php",
         ], 'asmi-menu');
 
+        $this->publishes([
+            __DIR__.'/../MoonShine/Resources/MenuResource.php' => app_path("MoonShine/Resources")."/MenuResource.php"
+        ], 'asmi-menu-moon-shine');
+
         // Страницы сайта
         $this->publishes([
             __DIR__.'/../Models/Page' => app_path("Models/Page"),

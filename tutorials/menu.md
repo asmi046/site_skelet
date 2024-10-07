@@ -8,12 +8,22 @@
 
 1. Выполнить миграции
 2. При необходимости настроить MenuSeeder.php
-3. Добавить меню в звгрузку опций:
+
+## Публикация ресурса в админку MoonShine
+
+>php artisan vendor:publish --tag=asmi-menu-moon-shine
+
+Добавление в провайдер:
+
 ```php
-use App\Models\Menu\Menu;
+use App\MoonShine\Resources\MenuResource;
 
-$menus = Menu::orderBy('order')->get();
+...
 
-View::share('main_menu', $menus);
+MenuItem::make(
+        static fn() => __('Мню'),
+        new MenuResource()
+    )->icon('heroicons.bars-3') ,
+
 
 ```

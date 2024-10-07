@@ -13,6 +13,7 @@ class Menu extends Model
     protected $fillable = [
         'lnk',
         'order',
+        'menu',
         'title',
     ];
 }
