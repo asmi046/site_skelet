@@ -9,7 +9,7 @@
 Пример интеграции в шаблон:
 
 ```php
-    <x-map-in-page :data="$contacts_data"></x-map-in-page>
+    <x-map.map-in-page :geo="$contacts['geo']" :adres="$contacts['adress']" :phone="$contacts['phone']"></x-map.map-in-page>
 ```
 
 В массив $contacts_data передаются следующие параметы:

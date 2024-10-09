@@ -4,8 +4,8 @@
     ymaps.ready(init);
 
     function init () {
-        let centerMap =[{{ $data['geo'] }}]
-        var myMap = new ymaps.Map("map_page", {
+        let centerMap =[{{ $geo }}]
+        var myMap = new ymaps.Map("map_in_page", {
             // Координаты центра карты
             center: centerMap,
             // Масштаб карты
@@ -23,10 +23,10 @@
             preset: 'islands#greenClusterIcons',
         });
 
-        myGeoObjects = new ymaps.Placemark([{{ $data['geo'] }}],
+        myGeoObjects = new ymaps.Placemark([{{ $geo }}],
             {
-                hintContent: '<div class="map-hint">{{ $data['adres'] }}</div>',
-                balloonContent: '<div class="map-hint"><b>«ПрофМедика»</b> <br/> {{ $data['adres'] }} <br/>  {{ $data['phone'] }} </div>',
+                hintContent: '<div class="map-hint">{{ $adres }}</div>',
+                balloonContent: '<div class="map-hint"><b>«ПрофМедика»</b> <br/> {{ $adres }} <br/>  {{ $phone }} </div>',
             }, {
                 preset: 'islands#icon',
                 iconColor: '#2E85B6'
@@ -48,6 +48,6 @@
 
 </script>
 
-<div id="map_page" class="map_page">
+<div id="map_in_page" class="map_in_page">
 
 </div>
