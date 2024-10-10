@@ -26,7 +26,7 @@
         myGeoObjects = new ymaps.Placemark([{{ $geo }}],
             {
                 hintContent: '<div class="map-hint">{{ $adres }}</div>',
-                balloonContent: '<div class="map-hint"><b>«ПрофМедика»</b> <br/> {{ $adres }} <br/>  {{ $phone }} </div>',
+                balloonContent: '<div class="map-hint"><b>«{{$name}}»</b> <br/> {{ $adres }} <br/>  {{ $phone }} </div>',
             }, {
                 preset: 'islands#icon',
                 iconColor: '#2E85B6'
@@ -34,11 +34,6 @@
 
         );
         clusterer.add(myGeoObjects);
-
-
-
-
-
 
         myMap.geoObjects.add(clusterer);
         // Отключим zoom
