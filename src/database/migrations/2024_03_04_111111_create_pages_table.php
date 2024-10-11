@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('slug')->comment('Слаг');
             $table->string('template')->nullable()->comment('Имя шаблона');
             $table->string('img')->nullable()->comment('Картинка баннера');
-            $table->text('description')->nullable()->comment('Текст страницы');
+            $table->mediumText('description')->nullable()->comment('Текст страницы');
 
             $table->string('seo_title')->nullable()->comment('SEO заголовок');
             $table->text('seo_description')->nullable()->comment('SEO описание');
