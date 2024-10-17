@@ -6,6 +6,8 @@
 
 [Боковое меню](side_menu.md)
 
+[SEO блок](seo.md)
+
 [Меню сайта](menu.md)
 
 [Хлебные крошки](breadcrumbs.md)

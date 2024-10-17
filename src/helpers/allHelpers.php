@@ -1,4 +1,11 @@
 <?php
+use App\Services\SeoServices;
+
+if (!function_exists("header_seo")) {
+    function seo_data():SeoServices {
+        return app(SeoServices::class);
+    }
+}
 
 // Месяц текстом
 if (!function_exists("get_month")) {

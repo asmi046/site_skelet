@@ -30,6 +30,10 @@ class SkiletServiceProvider extends ServiceProvider
             ]);
         }
 
+        Blade::directive('header_seo', static function () {
+            return '{!! seo_data() !!}';
+        });
+
         // Модальное окно
         $this->publishes([
             __DIR__.'/../resources/js/components/ModalWindow.vue' => resource_path("js/components/ModalWindow.vue"),
@@ -43,6 +47,17 @@ class SkiletServiceProvider extends ServiceProvider
             __DIR__.'/../routes/asmi_all.php' => base_path("routes")."/asmi_all.php",
             __DIR__.'/../public/scss' => public_path("scss")
         ], 'scilet-all');
+
+        //SEO
+        $this->publishes([
+            __DIR__.'/../config/asmiseo.php' => base_path("config")."/asmiseo.php",
+            __DIR__.'/../database/seeders/SeoDataSeeder.php' => database_path("seeders")."/SeoDataSeeder.php",
+            __DIR__.'/../database/migrations/2024_10_16_111113_create_seo_data_table.php' => database_path("migrations")."/2024_10_16_111113_create_seo_data_table.php",
+            __DIR__.'/../Models/SeoData.php' => app_path("Models")."/SeoData.php",
+            __DIR__.'/../Services/SeoServices.php' => app_path("Services")."/SeoServices.php",
+        ], 'seo-all');
+
+
 
         // Боковое меню
         $this->publishes([
