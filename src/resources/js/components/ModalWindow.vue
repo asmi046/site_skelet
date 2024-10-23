@@ -204,6 +204,11 @@ export default {
         .modal_h2 {
             font-size: 42px;
         }
+
+
+        .sending_form .control_wrap button{
+            width:100%;
+        }
     }
 
     @media (max-width: 320px){
