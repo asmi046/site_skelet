@@ -3,6 +3,7 @@
 namespace Asmi046\SiteSkelet\Providers;
 
 
+use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 use Asmi046\SiteSkelet\Console\Commands\CreateUser;
 use Asmi046\SiteSkelet\Console\Commands\ChengeUserPass;
