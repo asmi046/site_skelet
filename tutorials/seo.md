@@ -4,7 +4,7 @@
 
 Публикация файлов:
 
->php artisan vendor:publish --tag=all-seo
+>php artisan vendor:publish --tag=seo-all
 
 Необходимо опубликовать хелперы
 
