@@ -9,12 +9,17 @@
 предварительно устанавливаем библиотеку:
 
 >npm i v-slim-mask
+>npm i vue-axios
 
 Подключение компонента в app.js:
 
 ```JavaScript
     import {createApp} from 'vue/dist/vue.esm-bundler';
     import ModalWindow from "./components/ModalWindow.vue"
+    import { VMaskDirective } from 'v-slim-mask'
+
+    import axios from 'axios'
+    import VueAxios from 'vue-axios'
 
     const global_app = createApp({
         components:{
@@ -23,6 +28,8 @@
         setup() {}
     })
 
+    global_app.use(VueAxios, axios)
+    global_app.directive('mask', VMaskDirective)
     global_app.mount("#global_app");
 ```
 
