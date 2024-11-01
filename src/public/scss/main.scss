@@ -4,6 +4,7 @@
 @import "scroll";
 @import "text-styles";
 @import "pagination";
+@import "burger-icon";
 @import "standart";
 @import "form/all-form";
 @import "elements/all-elements";
@@ -38,6 +39,14 @@ img {
 .map_in_page {
     width:100%;
     min-height: 300px;
+}
+
+@media (max-width: 1440px) {
+    .container {
+        width: 96%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 // Схема с сайдбаром

@@ -37,7 +37,6 @@ class SeoServices {
 
     public function get_data_by_url() {
         $url = \Request::path();
-        debugbar()->info($url);
         $url_data = cache()->rememberForever(
             "seo_".Str::slug($url),
             function() {

@@ -6,7 +6,9 @@
 
 >php artisan vendor:publish --tag=modal-win
 
+предварительно устанавливаем библиотеку:
 
+>npm i v-slim-mask
 
 Подключение компонента в app.js:
 
