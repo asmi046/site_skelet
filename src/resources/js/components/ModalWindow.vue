@@ -1,7 +1,13 @@
 <template>
     <div v-show="showModal" @click.self="closeWin()" class="popup_wrapper">
         <div class="popup">
-            <div @click.prevent="closeWin()" class="popup__close" aria-label="Закрыть модальное окно"></div>
+            <div @click.prevent="closeWin()" class="popup__close" aria-label="Закрыть модальное окно">
+                <div class="icon-menu toggle_menu active" aria-label="Бургер меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
             <h2 class="modal_h2">{{title}}</h2>
             <p class="sub_h">{{subtitle}}</p>
             <form v-show="!showAccept" class="sending_form" action="/send_consult" method="POST">
@@ -116,13 +122,10 @@ export default {
 
     .popup__close {
         position: absolute;
-        top: 18px;
-        right: 15px;
+        top: 25px;
+        right: 20px;
         cursor: pointer;
         z-index: 30;
-        width: 20px;
-        height: 20px;
-        background: url("../../../public/img/icon/close.svg") 0 0 no-repeat;
     }
 
     .policy_descr,
