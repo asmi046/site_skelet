@@ -215,6 +215,7 @@ class SkiletServiceProvider extends ServiceProvider
             // Роуты
             __DIR__.'/../routes/asmi_cart.php' => base_path("routes")."/asmi_cart.php",
             __DIR__.'/../routes/asmi_favorites.php' => base_path("routes")."/asmi_favorites.php",
+
             // Blade компоненты
             __DIR__.'/../resources/views/components/burger-icon.blade.php' => resource_path("views/components/burger-icon.blade.php"),
 

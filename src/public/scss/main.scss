@@ -41,6 +41,15 @@ img {
     min-height: 300px;
 }
 
+.thencs_section {
+    text-align: center;
+    height: 80vh;
+    .emoji {
+        font-size: 100px;
+        margin-top: 20px;
+    }
+}
+
 @media (max-width: 1440px) {
     .container {
         width: 96%;
