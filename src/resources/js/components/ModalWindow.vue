@@ -12,7 +12,7 @@
             <p class="sub_h">{{subtitle}}</p>
             <form v-show="!showAccept" class="sending_form" action="/send_consult" method="POST">
                 <input type="hidden" name="_token" :value="_token">
-                <input type="text" v-mask="{mask: '+7 (NNN) NNN-NN-NN', model: 'cpf' }" name="phone" v-model="phone" placeholder="Телефон*">
+                <input type="text" v-mask="{mask: '+7(NNN)NNN-NN-NN', model: 'phone' }" name="phone" placeholder="Телефон*">
                 <div class="error_list_wrap">
                     <div v-for="(item, index) in errorList" :key="index" class="error">{{item}}</div>
                 </div>
@@ -58,10 +58,10 @@ export default {
         },
 
         sendMsg() {
-
+            const rt = /^([0-9]{1,}[\.,][0-9]{1,}|[0-9]{1,})|(-[0-9]{1,}[\.,][0-9]{1,}|-[0-9]{1,})$/
             this.errorList = [];this.errorList
 
-            if (this.phone == "")
+            if (rt.test(this.phone.trim()) == false)
                 this.errorList.push("Поле 'Телефон' не заполнено");
 
             if (this.errorList.length != 0 ) return
