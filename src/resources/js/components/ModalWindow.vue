@@ -58,7 +58,7 @@ export default {
         },
 
         sendMsg() {
-            const rt = /^([0-9]{1,}[\.,][0-9]{1,}|[0-9]{1,})|(-[0-9]{1,}[\.,][0-9]{1,}|-[0-9]{1,})$/
+            const rt = /\+\d{1}\(\d{3}\)\d{3}-\d{2}-\d{2}/g
             this.errorList = [];this.errorList
 
             if (rt.test(this.phone.trim()) == false)
