@@ -18,37 +18,36 @@ class PageSeeder extends Seeder
     public function run(): void
     {
 
-        // Storage::disk('public')->put("main_bnr.webp", file_get_contents(public_path('img/main_bnr.webp')), 'public');
+        $data = [
+            [
+                'title' => 'Политика конфиденциальности',
+                'slug' => Str::slug("Политика конфиденциальности"),
+                'description' => file_get_contents(public_path('page_text//policy.html')),
+            ],
 
-        // DB::table("pages")->insert(
-        //     [
-        //         [
-        //             'title' => 'Тестовая страница',
-        //             'slug' => Str::slug("Тестовая страница"),
-        //             'img' => Storage::url("main_bnr.webp"),
-        //             'template' => '',
-        //             'description' => file_get_contents(public_path('pages//bim.html')),
-        //             'seo_title' => 'Тестовая страница',
-        //             'seo_description' => 'Тестовая страница',
-        //         ],
-        //         [
-        //             'title' => 'Тестовая страница 1',
-        //             'slug' => Str::slug("Тестовая страница 1"),
-        //             'img' => Storage::url("main_bnr.webp"),
-        //             'description' => 'Тестовая страница 1 Тестовая страница Тестовая страница',
-        //             'seo_title' => 'Тестовая страница 1',
-        //             'seo_description' => 'Тестовая страница 1',
-        //         ]
+            [
+                'title' => 'О нас',
+                'slug' => Str::slug("О нас"),
+                'description' => file_get_contents(public_path('page_text//about.html')),
+            ],
+        ];
 
-        //          [
-        //              'title' => 'Политика конфиденциальности',
-        //              'slug' => Str::slug("Политика конфиденциальности"),
-        //              'img' => Storage::url("banner/main_bg.webp"),
-        //              'description' => file_get_contents(public_path('text//policy.html')),
-        //              'seo_title' => 'Политика конфиденциальности',
-        //              'seo_description' => 'Политика конфиденциальности',
-        //          ],
-        //     ]);
+
+
+        foreach ($data as $item) {
+            // Storage::disk('public')->put("main_bnr.webp", file_get_contents(public_path('img/main_bnr.webp')), 'public');
+            DB::table("pages")->insert($item);
+
+            // DB::table("seo_data")->insert(
+            //     [
+            //         'url' => 'page/'.$item['slug'],
+            //         'seo_title' => $item['title'],
+            //         'seo_description' => $item['title'],
+            //     ]
+            // );
+        }
+
+
 
     }
 }

@@ -91,7 +91,7 @@ class SkiletServiceProvider extends ServiceProvider
             __DIR__.'/../Http/Controllers/Page' => app_path("Http/Controllers/Page"),
             __DIR__.'/../resources/views/page/' => resource_path("views/page"),
             // Текст Политики
-            __DIR__.'/../public/text/policy.html' => public_path("text")."/policy.html",
+            __DIR__.'/../public/page_text/policy.html' => public_path("page_text")."/policy.html",
         ], 'asmi-pages');
 
         // Иконки месенджеров в углу сата
