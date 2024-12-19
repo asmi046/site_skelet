@@ -77,6 +77,9 @@ class SkiletServiceProvider extends ServiceProvider
             __DIR__.'/../Models/Menu' => app_path("Models/Menu"),
             __DIR__.'/../database/migrations/2024_03_04_111112_create_menus_table.php' => database_path("migrations")."/2024_03_04_111112_create_menus_table.php",
             __DIR__.'/../database/seeders/MenuSeeder.php' => database_path("seeders")."/MenuSeeder.php",
+            __DIR__.'/../database/seeders/MenuSeeder.php' => database_path("seeders")."/MenuSeeder.php",
+            __DIR__.'/../View/Components/Menues' => app_path("View/Components/Menues"),
+            __DIR__.'/../resources/views/components/menues/puncts.blade.php' => resource_path("views/components/menues/puncts.blade.php")
         ], 'asmi-menu');
 
         $this->publishes([

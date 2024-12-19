@@ -22,12 +22,14 @@ class PageSeeder extends Seeder
             [
                 'title' => 'Политика конфиденциальности',
                 'slug' => Str::slug("Политика конфиденциальности"),
+                'menu' => '',
                 'description' => file_get_contents(public_path('page_text//policy.html')),
             ],
 
             [
                 'title' => 'О нас',
                 'slug' => Str::slug("О нас"),
+                'menu' => '',
                 'description' => file_get_contents(public_path('page_text//about.html')),
             ],
         ];

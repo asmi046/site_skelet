@@ -16,7 +16,7 @@ return new class extends Migration
             $table->timestamps();
             $table->string('lnk', 500)->default("#")->comment('Ссылка');
             $table->string('title', 500)->comment('Анкор ссылки');
-            $table->string('menu', 500)->comment('Название меню');
+            $table->string('menu', 500)->default("Главное меню")->comment('Название меню');
             $table->integer('order')->default(0)->comment('Порядок вывода');
         });
     }
