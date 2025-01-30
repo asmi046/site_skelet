@@ -65,6 +65,7 @@ class SkiletServiceProvider extends ServiceProvider
             __DIR__.'/../resources/js/menues.js' => resource_path("js")."/menues.js",
             __DIR__.'/../public/scss/_menues.scss' => public_path("scss/_menues.scss"),
             __DIR__.'/../resources/views/components/menues' => resource_path("views/components/menues"),
+            __DIR__.'/../resources/views/components/burger-icon.blade.php' => resource_path("views/components/burger-icon.blade.php"),
         ], 'asmi-side-menue');
 
         // Водяные знаки для загрузки фото
