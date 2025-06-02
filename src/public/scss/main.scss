@@ -1,68 +1,23 @@
-@import "vars";
-@import "null";
-@import "fonts";
-@import "scroll";
-@import "text-styles";
-@import "pagination";
-@import "burger-icon";
-@import "standart";
-@import "form/all-form";
-@import "elements/all-elements";
+@use "vars";
+@use "null";
+@use "fonts";
+@use "scroll";
+@use "text-styles";
+@use "pagination";
+@use "burger-icon";
+@use "standart";
+@use "form/all-form";
+@use "elements/all-elements";
 
+@use "current";
 
-body{
-    font-family: $main_fonts;
-    font-size: 16px;
-}
-
-header,
-footer,
-section{
-    width: 100%;
-    padding-top: $section_space;
-    padding-bottom: $section_space;
-}
-
-.container{
-    width:100%;
-    max-width: $conteiner_max_w;
-    margin: 0 auto;
-}
-
-
-img {
-    width:100%;
-    height:100%;
-    object-fit: cover;
-}
-
-.map_in_page {
-    width:100%;
-    min-height: 300px;
-}
-
-.thencs_section {
-    text-align: center;
-    height: 80vh;
-    .emoji {
-        font-size: 100px;
-        margin-top: 20px;
-    }
-}
-
-@media (max-width: 1440px) {
-    .container {
-        width: 96%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
+@use "modal";
 
 // Схема с сайдбаром
-// @import "sidebar-schem";
+// @use "sidebar-schem";
 
 // Боковое беню
-// @import "menues";
+// @use "menues";
 
 // Иконка бургера
-// @import "burger-icon";
+// @use "burger-icon";

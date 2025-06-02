@@ -1,4 +1,6 @@
-@import "box";
-@import "button";
-@import "table";
-@import "details";
+@use '../vars' as *;
+
+@use "box";
+@use "button";
+@use "table";
+@use "details";

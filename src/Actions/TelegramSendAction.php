@@ -21,6 +21,7 @@ class TelegramSendAction {
                         CURLOPT_URL => 'https://api.telegram.org/bot' . $t_token . '/sendMessage',
                         CURLOPT_POST => TRUE,
                         CURLOPT_RETURNTRANSFER => TRUE,
+                        CURLOPT_SSL_VERIFYPEER => false,
                         CURLOPT_TIMEOUT => 10,
                         CURLOPT_POSTFIELDS => array(
                             'chat_id' => trim($arr_chat[$i]),

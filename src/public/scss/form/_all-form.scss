@@ -1,7 +1,9 @@
-@import "input";
-@import "label";
-@import "field";
-@import "search_input";
+@use '../vars' as *;
+
+@use "input";
+@use "label";
+@use "field";
+@use "search_input";
 
 
 form {
@@ -10,6 +12,6 @@ form {
     }
 
     header{
-        background-color: unset;  
+        background-color: unset;
     }
 }

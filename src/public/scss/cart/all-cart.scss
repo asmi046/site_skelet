@@ -1,10 +1,9 @@
-$main_color: #65B965;
-$sub_color: #ffcb00e6;
+@use '../vars' as *;
 
-@import "cart_table_in_page";
-@import "to_card_btn";
-@import "to_cart_widget";
-@import "multi-search";
+@use "cart_table_in_page";
+@use "to_card_btn";
+@use "to_cart_widget";
+@use "multi-search";
 
 .cart_icon {
     fill: $main_color;
