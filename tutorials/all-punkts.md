@@ -130,6 +130,13 @@ export default defineConfig({
 </div>
 ```
 
+Чекбокс:
+```html
+    <label class="check_wrapper">
+        <input name="policy_check" type="checkbox" checked > <span>Заполняя данную форму я соглашаюсь с <a href="#">политикой конфиденциальности</a></span>
+    </label>
+```
+
 Успешное выполнение действия после отправки формы:
 
 ```php
