@@ -25,6 +25,7 @@
     const global_app = createApp({
         components:{
             ModalWindow,
+            EmptyModal,
         },
         setup() {}
     })
@@ -40,8 +41,8 @@
     <div class="modal_win" id="global_app">
         <modal-window rout="/send_consult" redirect="/thencs" hesh="showModal" title="Помощь специалиста" subtitle="Мы свяжемся с Вами в течении 15 минут"></modal-window>
 
-        <city-select-modal hesh="cityselect" title="Выбор города" subtitle="Выберите город в котором вы проживаете">
+        <empty-modal hesh="cityselect" title="Выбор города" subtitle="Выберите город в котором вы проживаете">
             // нужное в слот
-        </city-select-modal>
+        </empty-modal>
     </div>
 ```
