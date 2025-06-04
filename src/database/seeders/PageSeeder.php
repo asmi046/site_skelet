@@ -40,7 +40,7 @@ class PageSeeder extends Seeder
             [
                 'title' => 'О нас',
                 'slug' => Str::slug("О нас"),
-                'description' => file_get_contents(public_path('page_text//about.html')),
+                'description' => file_get_contents(public_path('page_text//cookie.html')),
             ],
         ];
 
