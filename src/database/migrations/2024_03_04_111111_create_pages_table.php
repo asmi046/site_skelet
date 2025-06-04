@@ -16,12 +16,12 @@ return new class extends Migration
             $table->timestamps();
             $table->string('title')->comment('Заголовок');
             $table->string('slug')->unique()->comment('Слаг');
+            $table->integer('parent')->nullable()->comment('Родительская страница');
             $table->string('template')->nullable()->comment('Имя шаблона');
-            $table->string('img')->nullable()->comment('Картинка баннера');
-            $table->mediumText('description')->nullable()->comment('Текст страницы');
-
-            $table->string('seo_title')->nullable()->comment('SEO заголовок');
-            $table->text('seo_description')->nullable()->comment('SEO описание');
+            $table->string('img', 800)->nullable()->comment('Картинка страницы');
+            $table->longText('description')->nullable()->comment('Текст страницы');
+            $table->json('images')->nullable()->comment('Галерея изображений');
+            $table->json('files')->nullable()->comment('Файлы');
         });
     }
 

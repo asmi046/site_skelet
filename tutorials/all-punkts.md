@@ -14,6 +14,8 @@
 
 [Модальное окно](ModalWindows.md)
 
+[Cookies информер](Cookies.md)
+
 [Водяные знаки для загружаемых фото](water_mark.md)
 
 [Пагинация](pagination_help.md)

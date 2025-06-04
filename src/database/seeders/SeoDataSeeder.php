@@ -22,29 +22,23 @@ class SeoDataSeeder extends Seeder
                 'page_title' => "",
             ],
             [
-                'url' => "doctors",
-                'seo_title' => "Специалисты нашей клиники",
-                'seo_description' => "Специалисты нашей клиники",
-                'page_title' => "Специалисты нашей клиники",
+                'url' => "page/politika-v-oblasti-obrabotki-personalnyx-dannyx",
+                'seo_title' => "Политика в области обработки персональных данных",
+                'seo_description' => "Политика в области обработки персональных данных",
+                'page_title' => "",
             ],
             [
-                'url' => "prices",
-                'seo_title' => "Цены на стоматологические услуги",
-                'seo_description' => "Выгодные цены на стоматологические услуги в Курске",
-                'page_title' => "Цены на услуги",
+                'url' => "page/soglasie-na-obrabotku-personalnyx-dannyx",
+                'seo_title' => "Согласие на обработку персональных данных",
+                'seo_description' => "Согласие на обработку персональных данных",
+                'page_title' => "",
             ],
             [
-                'url' => "contacts",
-                'seo_title' => "Контакты клиники",
-                'seo_description' => "Контакты нашей клиники, свяжитесь с нами любым удобным способом",
-                'page_title' => "Контакты",
+                'url' => "page/o-failax-cookie",
+                'seo_title' => "Подробнее о файлах cookie",
+                'seo_description' => "Подробнее о файлах cookie",
+                'page_title' => "",
             ],
-            [
-                'url' => "services",
-                'seo_title' => "Стоматологические услуги нгашей клиники",
-                'seo_description' => "Стоматологические услуги нгашей клиники",
-                'page_title' => "Услуги",
-            ]
         ];
 
         DB::table("seo_data")->insert($data);

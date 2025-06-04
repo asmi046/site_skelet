@@ -20,20 +20,29 @@ class PageSeeder extends Seeder
 
         $data = [
             [
-                'title' => 'Политика конфиденциальности',
-                'slug' => Str::slug("Политика конфиденциальности"),
-                'menu' => '',
-                'description' => file_get_contents(public_path('page_text//policy.html')),
+                'title' => "Политика в области обработки персональных данных",
+                'slug' => Str::slug("Политика в области обработки персональных данных"),
+                'description' => file_get_contents(public_path('tmp_data/page/policy.html')),
+            ],
+
+            [
+                'title' => "Согласие на обработку персональных данных",
+                'slug' => Str::slug("Согласие на обработку персональных данных"),
+                'description' => file_get_contents(public_path('tmp_data/page/accept.html')),
+            ],
+
+            [
+                'title' => "О файлах Cookie",
+                'slug' => Str::slug("О файлах Cookie"),
+                'description' => file_get_contents(public_path('tmp_data/page/accept.html')),
             ],
 
             [
                 'title' => 'О нас',
                 'slug' => Str::slug("О нас"),
-                'menu' => '',
                 'description' => file_get_contents(public_path('page_text//about.html')),
             ],
         ];
-
 
 
         foreach ($data as $item) {

@@ -41,6 +41,11 @@ class SkiletServiceProvider extends ServiceProvider
             __DIR__.'/../resources/js/components/EmptyModal.vue' => resource_path("js/components/EmptyModal.vue"),
         ], 'modal-win');
 
+        // cookies
+        $this->publishes([
+            __DIR__.'/../resources/js/components/CookiesWarning.vue' => resource_path("js/components/CookiesWarning.vue"),
+        ], 'cookies');
+
         // Скилет
         $this->publishes([
             __DIR__.'/../Http/Controllers/IndexController.php' => app_path("Http/Controllers")."/IndexController.php",
