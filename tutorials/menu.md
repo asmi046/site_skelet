@@ -13,17 +13,14 @@
 
 >php artisan vendor:publish --tag=asmi-menu-moon-shine
 
-Добавление в провайдер:
+Добавление в лайаут:
 
 ```php
 use App\MoonShine\Resources\MenuResource;
 
 ...
 
-MenuItem::make(
-        static fn() => __('Мню'),
-        new MenuResource()
-    )->icon('heroicons.bars-3') ,
+ MenuItem::make('Меню', MenuResource::class)->icon('bars-3-bottom-left'),
 
 
 ```
