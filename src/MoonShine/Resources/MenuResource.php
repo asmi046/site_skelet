@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\MoonShine\Resources;
 
-use App\Models\Menu;
+use App\Models\Menu\Menu;
 use MoonShine\UI\Fields\ID;
 
 use MoonShine\UI\Fields\Url;
