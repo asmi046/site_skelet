@@ -10,6 +10,8 @@
 
 [Меню сайта](menu.md)
 
+[Контакты](contacts.md)
+
 [Хлебные крошки](breadcrumbs.md)
 
 [Модальное окно](ModalWindows.md)

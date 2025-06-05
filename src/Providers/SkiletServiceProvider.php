@@ -92,6 +92,17 @@ class SkiletServiceProvider extends ServiceProvider
             __DIR__.'/../MoonShine/Resources/MenuResource.php' => app_path("MoonShine/Resources")."/MenuResource.php"
         ], 'asmi-menu-moon-shine');
 
+        // Контакты
+        $this->publishes([
+            __DIR__.'/../Models/Contact.php' => app_path("Models")."/Contact.php",
+            __DIR__.'/../database/migrations/2025_05_09_444441_create_contacts_table.php' => database_path("migrations")."/2025_05_09_444441_create_contacts_table.php",
+            __DIR__.'/../database/seeders/ContactSeeder.php' => database_path("seeders")."/ContactSeeder.php",
+        ], 'asmi-contacts');
+
+        $this->publishes([
+            __DIR__.'/../MoonShine/Resources/ContactResource.php' => app_path("MoonShine/Resources")."/ContactResource.php"
+        ], 'asmi-contacts-moon-shine');
+
         // Страницы сайта
         $this->publishes([
             __DIR__.'/../Models/Page' => app_path("Models/Page"),
