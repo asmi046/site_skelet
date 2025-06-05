@@ -4,22 +4,17 @@ declare(strict_types=1);
 
 namespace App\MoonShine\Resources;
 
-use MoonShine\Fields\ID;
+use App\Models\Menu;
+use MoonShine\UI\Fields\ID;
 
-
-use App\Models\Menu\Menu;
-use MoonShine\Fields\Url;
-use MoonShine\Fields\Text;
-use MoonShine\Fields\Field;
-use MoonShine\Fields\Number;
-use MoonShine\Fields\Select;
-use MoonShine\Fields\Switcher;
-use MoonShine\Decorations\Block;
-use MoonShine\Handlers\ExportHandler;
-use MoonShine\Handlers\ImportHandler;
-use MoonShine\Resources\ModelResource;
+use MoonShine\UI\Fields\Url;
+use MoonShine\UI\Fields\Text;
+use MoonShine\UI\Fields\Number;
 use Illuminate\Database\Eloquent\Model;
-use MoonShine\Components\MoonShineComponent;
+use MoonShine\UI\Components\Layout\Box;
+use MoonShine\Contracts\UI\FieldContract;
+use MoonShine\Contracts\UI\ComponentContract;
+use MoonShine\Laravel\Resources\ModelResource;
 
 /**
  * @extends ModelResource<Menu>
@@ -29,43 +24,61 @@ class MenuResource extends ModelResource
     protected string $model = Menu::class;
 
     protected string $title = 'Меню';
+
     protected string $column = 'title';
 
-    public function import(): ?ImportHandler
-    {
-        return null;
-    }
-
-    public function export(): ?ExportHandler
-    {
-        return null;
-    }
-
-    public function filters(): array
+    /**
+     * @return list<FieldContract>
+     */
+    protected function indexFields(): iterable
     {
         return [
-            Select::make('Выберите меню', 'menu')
-            ->options([
-                'Главное меню' => 'Главное меню',
-                'Дополнительная информация' => 'Дополнительная информация'
-
-            ])->nullable()->placeholder('Выберите пункт меню')
+            ID::make()->sortable(),
+            Text::make('Название меню', 'menu_name'),
+            Text::make('Имя пункта', 'title'),
+            Number::make('Родитель', 'parent'),
+            Number::make('Порядок', 'order')
         ];
     }
 
     /**
-     * @return list<MoonShineComponent|Field>
+     * @return list<ComponentContract|FieldContract>
      */
-    public function fields(): array
+    protected function formFields(): iterable
     {
         return [
-            Block::make([
-                ID::make()->sortable(),
-                Text::make('Название', 'title'),
-                Text::make('Ссылка', 'lnk'),
-                Text::make('Меню', 'menu'),
-                Number::make('Порядок сортировки', 'order')->sortable(),
-            ]),
+            Box::make([
+                ID::make(),
+                Text::make('Название меню', 'menu_name'),
+                Text::make('Имя пункта', 'title'),
+                Number::make('Родитель', 'parent')->default(0),
+                Number::make('Порядок', 'order'),
+                Text::make("Ссылка", 'lnk')
+            ])
+        ];
+    }
+
+    /**
+     * @return list<FieldContract>
+     */
+    protected function detailFields(): iterable
+    {
+        return [
+            ID::make(),
+            Text::make('Название меню', 'menu_name'),
+            Text::make('Имя пункта', 'title'),
+            Number::make('Родитель', 'parent'),
+            Number::make('Порядок', 'order'),
+            Text::make("Ссылка", 'lnk')
+        ];
+    }
+
+
+    protected function filters(): iterable
+    {
+        return [
+            Text::make('Название меню', 'menu_name'),
+            Text::make('Имя пункта', 'title'),
         ];
     }
 
@@ -75,8 +88,12 @@ class MenuResource extends ModelResource
      * @return array<string, string[]|string>
      * @see https://laravel.com/docs/validation#available-validation-rules
      */
-    public function rules(Model $item): array
+    protected function rules(mixed $item): array
     {
-        return [];
+        return [
+            'menu_name' => ['required'],
+            'title' => ['required'],
+            'title_en' => ['required'],
+        ];
     }
 }
