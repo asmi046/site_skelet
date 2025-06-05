@@ -16,7 +16,7 @@ class Puncts extends Component
      */
     public function __construct(public string $name = "Главное меню")
     {
-        $this->menu = Cache::rememberForever('menu_'.$name, function (string $name) {
+        $this->puncts = Cache::rememberForever('menu_'.$name, function () use ($name) {
             return Menu::where('menu_name', $name)->orderBy("order", "ASC")->get();
         });
     }
