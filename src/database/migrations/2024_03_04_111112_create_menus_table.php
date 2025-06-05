@@ -14,10 +14,11 @@ return new class extends Migration
         Schema::create('menus', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('lnk', 500)->default("#")->comment('Ссылка');
+            $table->string('menu_name')->comment('Название меню');
             $table->string('title', 500)->comment('Анкор ссылки');
-            $table->string('menu', 500)->default("Главное меню")->comment('Название меню');
             $table->integer('order')->default(0)->comment('Порядок вывода');
+            $table->integer('parent')->default(0)->comment('Радительский пункт');
+            $table->string('lnk', 1500)->default("#")->comment('Ссылка');
         });
     }
 

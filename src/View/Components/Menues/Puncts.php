@@ -6,6 +6,7 @@ use Closure;
 use App\Models\Menu\Menu;
 use Illuminate\View\Component;
 use Illuminate\Contracts\View\View;
+use Illuminate\Support\Facades\Cache;
 
 class Puncts extends Component
 {
@@ -15,11 +16,9 @@ class Puncts extends Component
      */
     public function __construct(public string $name = "Главное меню")
     {
-        try {
-            $this->puncts = Menu::where('menu', $name)->get();
-        } catch (\Throwable $e) {
-            $this->puncts = null;
-        }
+        $this->menu = Cache::rememberForever('menu_'.$name, function (string $name) {
+            return Menu::where('menu_name', $name)->orderBy("order", "ASC")->get();
+        });
     }
 
     /**
