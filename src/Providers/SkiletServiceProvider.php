@@ -111,6 +111,9 @@ class SkiletServiceProvider extends ServiceProvider
             __DIR__.'/../Http/Controllers/Page' => app_path("Http/Controllers/Page"),
             __DIR__.'/../resources/views/page/' => resource_path("views/page"),
             // Текст Политики
+            __DIR__.'/../public/page_text/accept.html' => public_path("page_text")."/accept.html",
+            __DIR__.'/../public/page_text/cookie.html' => public_path("page_text")."/cookie.html",
+            __DIR__.'/../public/page_text/main.html' => public_path("page_text")."/main.html",
             __DIR__.'/../public/page_text/policy.html' => public_path("page_text")."/policy.html",
         ], 'asmi-pages');
 
