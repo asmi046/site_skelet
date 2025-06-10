@@ -8,6 +8,16 @@
 
 >php artisan vendor:publish --tag=asmi-pages-moon-shine
 
+Прописать в layout Moon-Shine:
+
+```php
+use App\MoonShine\Resources\PageResource;
+
+...
+
+MenuItem::make("Страницы", PageResource::class)->icon('document-text'),
+```
+
 Необходимые действия:
 
 1. Выполнить миграции
