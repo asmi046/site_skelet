@@ -117,6 +117,10 @@ class SkiletServiceProvider extends ServiceProvider
             __DIR__.'/../public/page_text/policy.html' => public_path("page_text")."/policy.html",
         ], 'asmi-pages');
 
+        $this->publishes([
+            __DIR__.'/../MoonShine/Resources/PageResource.php' => app_path("MoonShine/Resources")."/PageResource.php"
+        ], 'asmi-pages-moon-shine');
+
         // Иконки месенджеров в углу сата
         $this->publishes([
             __DIR__.'/../resources/views/components/messenger-btn' => resource_path("views/components/messenger-btn"),
