@@ -21,8 +21,10 @@ class Page extends Model
         'seo_description',
     ];
 
-    protected $allowedSorts = [
-        'title',
+
+    protected $casts = [
+        'images' => 'array',
+        'files' => 'array',
     ];
 
     public function setSlugAttribute($value)
