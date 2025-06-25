@@ -20,6 +20,13 @@
         'resources/js/app.js',
         'public/scss/main.scss'
     ])
+
+    <script>
+        window.Laravel = {
+            assetUrl: '{{ asset('') }}',
+            storageUrl: '{{ Storage::url('') }}'
+        };
+    </script>
 </head>
 <body>
     <main id="main">

@@ -44,6 +44,8 @@
 
 [Хэлперы](helpers.md)
 
+[Передача asset и storage в vue компонент](asset_to_vue.md)
+
 
 ## Установка пакета
 >composer require asmi046/site_skelet --dev
