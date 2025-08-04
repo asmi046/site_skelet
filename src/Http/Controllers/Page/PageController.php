@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers\Page;
 
-use Illuminate\Http\Request;
-
 use App\Models\Page\Page;
+
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\View;
 
 class PageController extends Controller
 {
@@ -15,6 +16,8 @@ class PageController extends Controller
 
         if($page == null) abort('404');
 
-        return view('page.page', ['page' => $page]);
+        $template = (View::exists($page->template))?$page->template:'page.page';
+
+        return view($template, ['page' => $page]);
     }
 }
