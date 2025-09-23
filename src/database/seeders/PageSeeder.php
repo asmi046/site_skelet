@@ -47,13 +47,15 @@ class PageSeeder extends Seeder
 
         foreach ($data as $item) {
             // Storage::disk('public')->put("main_bnr.webp", file_get_contents(public_path('img/main_bnr.webp')), 'public');
-            DB::table("pages")->insert($item);
+            $pageId = DB::table("pages")->insertGetId($item);
 
             // DB::table("seo_data")->insert(
             //     [
             //         'url' => 'page/'.$item['slug'],
             //         'seo_title' => $item['title'],
             //         'seo_description' => $item['title'],
+            //         'seoable_id' => $pageId,
+            //         'seoable_type' => "App\Models\Page"
             //     ]
             // );
         }

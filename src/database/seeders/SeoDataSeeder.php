@@ -20,24 +20,32 @@ class SeoDataSeeder extends Seeder
                 'seo_title' => "Стоматология в Курске",
                 'seo_description' => "Стоматологическая клиника Dentalica в городе Курск. Все виды стоматологических услуг",
                 'page_title' => "",
+                // 'seoable_id' => 1,
+                // 'seoable_type' => "App\Models\Page"
             ],
             [
                 'url' => "page/politika-v-oblasti-obrabotki-personalnyx-dannyx",
                 'seo_title' => "Политика в области обработки персональных данных",
                 'seo_description' => "Политика в области обработки персональных данных",
                 'page_title' => "",
+                // 'seoable_id' => 1,
+                // 'seoable_type' => "App\Models\Page"
             ],
             [
                 'url' => "page/soglasie-na-obrabotku-personalnyx-dannyx",
                 'seo_title' => "Согласие на обработку персональных данных",
                 'seo_description' => "Согласие на обработку персональных данных",
                 'page_title' => "",
+                // 'seoable_id' => 1,
+                // 'seoable_type' => "App\Models\Page"
             ],
             [
                 'url' => "page/o-failax-cookie",
                 'seo_title' => "Подробнее о файлах cookie",
                 'seo_description' => "Подробнее о файлах cookie",
                 'page_title' => "",
+                // 'seoable_id' => 1,
+                // 'seoable_type' => "App\Models\Page"
             ],
         ];
 
