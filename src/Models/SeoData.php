@@ -16,4 +16,12 @@ class SeoData extends Model
         'seo_description',
         'page_title',
     ];
+
+    /**
+    * Получить родительскую модель seoable.
+    */
+    public function seoable()
+    {
+        return $this->morphTo();
+    }
 }

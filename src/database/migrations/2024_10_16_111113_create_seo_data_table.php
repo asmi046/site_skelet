@@ -19,6 +19,8 @@ return new class extends Migration
             $table->string('seo_title')->comment('SEO заголовок');
             $table->string('seo_description')->nullable()->comment('SEO описание');
             $table->string('page_title')->nullable()->comment('SEO заголовок');
+            $table->unsignedBigInteger('seoable_id')->nullable();
+            $table->string('seoable_type')->nullable();
         });
     }
 

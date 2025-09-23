@@ -64,7 +64,9 @@ class SkiletServiceProvider extends ServiceProvider
             __DIR__.'/../Services/SeoServices.php' => app_path("Services")."/SeoServices.php",
         ], 'seo-all');
 
-
+        $this->publishes([
+            __DIR__.'/../MoonShine/Resources/SeoDataResource.php' => app_path("MoonShine/Resources")."/SeoDataResource.php"
+        ], 'asmi-seo-moon-shine');
 
         // Боковое меню
         $this->publishes([

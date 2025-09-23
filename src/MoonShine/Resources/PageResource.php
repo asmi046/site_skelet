@@ -25,6 +25,8 @@ use MoonShine\UI\Components\ActionButton;
 use MoonShine\Contracts\UI\ComponentContract;
 use MoonShine\Laravel\Resources\ModelResource;
 use MoonShine\Laravel\Fields\Relationships\BelongsTo;
+use MoonShine\Laravel\Fields\Relationships\MorphOne;
+use App\MoonShine\Resources\SeoDataResource;
 
 /**
  * @extends ModelResource<Page>
@@ -84,6 +86,12 @@ class PageResource extends ModelResource
                     ])->removable(),
                 ]),
             ]),
+
+            MorphOne::make(
+                'SEO',
+                'seoData',
+                resource: SeoDataResource::class
+            ),
 
             // ActionButton::make(
             //     label: 'Перейти к странице',

@@ -15,7 +15,7 @@
     left: 0px;
     width: 100%;
     height: 2px;
-    background-color: $main_color;
+    background-color: $sub_color;
     -webkit-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
@@ -31,6 +31,7 @@
   }
 
   .show_menue_button.active .icon-menu span,
+  .active_force span,
   .icon-menu.active span {
     -ms-transform: scale(0);
     -webkit-transform: scale(0);
@@ -38,6 +39,7 @@
   }
 
   .show_menue_button.active .icon-menu span:first-child,
+  .active_force span:first-child,
   .icon-menu.active span:first-child {
     -ms-transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
@@ -46,6 +48,7 @@
   }
 
   .show_menue_button.active .icon-menu span:last-child,
+  .active_force span:last-child,
   .icon-menu.active span:last-child {
     -ms-transform: rotate(45deg);
     -webkit-transform: rotate(45deg);

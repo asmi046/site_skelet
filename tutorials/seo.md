@@ -6,6 +6,33 @@
 
 >php artisan vendor:publish --tag=seo-all
 
+Публикация ресурса MoonShine:
+
+>php artisan vendor:publish --tag=asmi-seo-moon-shine
+
+Добавление ресурса MoonShine в лайаут:
+
+
+```php    
+use App\MoonShine\Resources\SeoDataResource;
+
+MenuItem::make(
+    static fn() => __('SEO'),
+    SeoDataResource::class,
+)->icon('chart-bar-square'),
+```
+
+Регистрация ресурса MoonShine в провайдере (MoonShineServiceProvider.php):
+
+
+```php 
+    use App\MoonShine\Resources\SeoDataResource;
+
+    $core
+            ->resources([
+                SeoDataResource::class,
+```
+
 Необходимо опубликовать хелперы
 
 В лайауте нужно добавить директиву:

@@ -35,6 +35,11 @@ class Page extends Model
         return $this->BelongsTo(Page::class, 'parent');
     }
 
+    public function seoData()
+    {
+        return $this->morphOne(SeoData::class, 'seoable');
+    }
+
     public function setSlugAttribute($value)
     {
         if (empty($value))
