@@ -51,6 +51,8 @@ class SkiletServiceProvider extends ServiceProvider
             __DIR__.'/../Http/Controllers/IndexController.php' => app_path("Http/Controllers")."/IndexController.php",
             __DIR__.'/../resources/views/layouts' => resource_path("views/layouts"),
             __DIR__.'/../resources/views/index.blade.php' => resource_path("views")."/index.blade.php",
+            __DIR__.'/../resources/views/components/a-icon.blade.php' => resource_path("views/components/a-icon.blade.php"),
+            __DIR__.'/../resources/views/components/div-icon.blade.php' => resource_path("views/components/div-icon.blade.php"),
             __DIR__.'/../routes/asmi_all.php' => base_path("routes")."/asmi_all.php",
             __DIR__.'/../public/scss' => public_path("scss")
         ], 'scilet-all');

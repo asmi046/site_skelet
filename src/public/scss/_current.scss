@@ -50,6 +50,24 @@ img {
     }
 }
 
+.icon_line {
+    display: flex;
+    color:white;
+    gap:10px;
+
+    & > * {
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    .sprite_icon {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+        fill: $main_color;
+    }
+}
+
+
 @media (max-width: 1440px) {
     .container {
         width: 96%;
