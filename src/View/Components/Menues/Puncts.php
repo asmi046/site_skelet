@@ -2,22 +2,28 @@
 
 namespace App\View\Components\Menues;
 
-use Closure;
 use App\Models\Menu\Menu;
-use Illuminate\View\Component;
+use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\View\Component;
 
 class Puncts extends Component
 {
     public $puncts;
+
     /**
      * Create a new component instance.
      */
-    public function __construct(public string $name = "Главное меню")
+    public function __construct(public string $name = 'Главное меню')
     {
         $this->puncts = Cache::rememberForever('menu_'.$name, function () use ($name) {
-            return Menu::where('menu_name', $name)->orderBy("order", "ASC")->get();
+            return Menu::query()
+                ->where('menu_name', $name)
+                ->where('parent', 0)
+                ->with('children')
+                ->orderBy('order', 'ASC')
+                ->get();
         });
     }
 

@@ -5,16 +5,14 @@ declare(strict_types=1);
 namespace App\MoonShine\Resources;
 
 use App\Models\Menu\Menu;
-use MoonShine\UI\Fields\ID;
-
-use MoonShine\UI\Fields\Url;
-use MoonShine\UI\Fields\Text;
-use MoonShine\UI\Fields\Number;
-use Illuminate\Database\Eloquent\Model;
-use MoonShine\UI\Components\Layout\Box;
-use MoonShine\Contracts\UI\FieldContract;
 use MoonShine\Contracts\UI\ComponentContract;
+use MoonShine\Contracts\UI\FieldContract;
+use MoonShine\Laravel\Fields\Relationships\BelongsTo;
 use MoonShine\Laravel\Resources\ModelResource;
+use MoonShine\UI\Components\Layout\Box;
+use MoonShine\UI\Fields\ID;
+use MoonShine\UI\Fields\Number;
+use MoonShine\UI\Fields\Text;
 
 /**
  * @extends ModelResource<Menu>
@@ -37,7 +35,7 @@ class MenuResource extends ModelResource
             Text::make('Название меню', 'menu_name'),
             Text::make('Имя пункта', 'title'),
             Number::make('Родитель', 'parent'),
-            Number::make('Порядок', 'order')
+            Number::make('Порядок', 'order'),
         ];
     }
 
@@ -51,10 +49,15 @@ class MenuResource extends ModelResource
                 ID::make(),
                 Text::make('Название меню', 'menu_name'),
                 Text::make('Имя пункта', 'title'),
-                Number::make('Родитель', 'parent')->default(0),
+                BelongsTo::make(
+                    'Родитель',
+                    'parentItem',
+                    formatted: static fn (Menu $model): string => $model->title,
+                    resource: MenuResource::class,
+                ),
                 Number::make('Порядок', 'order'),
-                Text::make("Ссылка", 'lnk')
-            ])
+                Text::make('Ссылка', 'lnk'),
+            ]),
         ];
     }
 
@@ -69,10 +72,9 @@ class MenuResource extends ModelResource
             Text::make('Имя пункта', 'title'),
             Number::make('Родитель', 'parent'),
             Number::make('Порядок', 'order'),
-            Text::make("Ссылка", 'lnk')
+            Text::make('Ссылка', 'lnk'),
         ];
     }
-
 
     protected function filters(): iterable
     {
@@ -83,9 +85,9 @@ class MenuResource extends ModelResource
     }
 
     /**
-     * @param Menu $item
-     *
+     * @param  Menu  $item
      * @return array<string, string[]|string>
+     *
      * @see https://laravel.com/docs/validation#available-validation-rules
      */
     protected function rules(mixed $item): array
@@ -93,7 +95,6 @@ class MenuResource extends ModelResource
         return [
             'menu_name' => ['required'],
             'title' => ['required'],
-            'title_en' => ['required'],
         ];
     }
 }
