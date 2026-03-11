@@ -52,7 +52,7 @@ class MenuResource extends ModelResource
                 BelongsTo::make(
                     'Родитель',
                     'parentItem',
-                    formatted: static fn (Menu $model): string => $model->title,
+                    formatted: static fn (Menu $model): string => $model->title.' ('.$model->menu_name.')',
                     resource: MenuResource::class,
                 ),
                 Number::make('Порядок', 'order'),
