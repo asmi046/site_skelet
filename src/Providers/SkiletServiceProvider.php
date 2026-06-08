@@ -35,6 +35,10 @@ class SkiletServiceProvider extends ServiceProvider
             return '{!! seo_data() !!}';
         });
 
+        Blade::directive('header_seo_with_img', static function ($expression) {
+            return "{!! seo_data({$expression}) !!}";
+        });
+
         // Модальное окно
         $this->publishes([
             __DIR__.'/../resources/js/components/ModalWindow.vue' => resource_path("js/components/ModalWindow.vue"),
