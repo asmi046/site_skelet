@@ -62,10 +62,13 @@ class SeoServices
         $url = \Request::path();
         $url_data = cache()->rememberForever(
             'seo_'.Str::slug($url),
-            function () {
+            function (): ?array {
                 $url = \Request::path();
 
-                return SeoData::where('url', $url)->first();
+                return SeoData::query()
+                    ->where('url', $url)
+                    ->first(['seo_title', 'seo_description'])
+                    ?->toArray();
             }
         );
 
