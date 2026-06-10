@@ -24,9 +24,9 @@ class SeoServices
     public function __toString()
     {
 
-        $seo_title = $this->seo_data ? $this->seo_data->seo_title : config('asmiseo.default_seo_title');
+        $seo_title = $this->seo_data['seo_title'] ?? config('asmiseo.default_seo_title');
         $seo_title .= config('asmiseo.concat_title_postfix') ? ' - '.config('asmiseo.title_postfix') : '';
-        $seo_description = $this->seo_data ? $this->seo_data->seo_description : config('asmiseo.default_seo_description');
+        $seo_description = $this->seo_data['seo_description'] ?? config('asmiseo.default_seo_description');
 
         if ($this->is_404) {
             $seo_title = config('asmiseo.seo_title_404');
@@ -34,7 +34,7 @@ class SeoServices
         }
 
         if ($this->seo_data) {
-            $this->og_img = ($this->seo_data->img) ? Storage::url($this->seo_data->img) : $this->og_img;
+            $this->og_img = ($this->seo_data['img']) ? Storage::url($this->seo_data['img']) : $this->og_img;
         }
 
         $result = '<title>'.$seo_title.'</title>'."\n\r";
@@ -67,7 +67,7 @@ class SeoServices
 
                 return SeoData::query()
                     ->where('url', $url)
-                    ->first(['seo_title', 'seo_description'])
+                    ->first(['seo_title', 'seo_description', 'img'])
                     ?->toArray();
             }
         );
