@@ -105,6 +105,8 @@ class SkiletServiceProvider extends ServiceProvider
             __DIR__.'/../Models/Contact.php' => app_path("Models")."/Contact.php",
             __DIR__.'/../database/migrations/2025_05_09_444441_create_contacts_table.php' => database_path("migrations")."/2025_05_09_444441_create_contacts_table.php",
             __DIR__.'/../database/seeders/ContactSeeder.php' => database_path("seeders")."/ContactSeeder.php",
+            __DIR__.'/../Http/Controllers/ContactController.php' => app_path("Http/Controllers")."/ContactController.php",
+            __DIR__.'/../resources/views/contacts/contacts.blade.php' => resource_path("views")."/contacts.blade.php",
         ], 'asmi-contacts');
 
         $this->publishes([

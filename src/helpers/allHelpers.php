@@ -50,3 +50,19 @@ if (!function_exists("phone_format")) {
         return $res;
     }
 }
+
+// Получение контент-блоков по группе
+if (!function_exists("content_block")) {
+    function content_block(string $group): \Illuminate\Database\Eloquent\Collection
+    {
+        return \App\Models\ContentBlock::group($group);
+    }
+}
+
+// Получение контакта по имени
+if (! function_exists('contact')) {
+    function contact(string $name): ?string
+    {
+        return Contact::allFromCacheName()->get($name)?->value;
+    }
+}
